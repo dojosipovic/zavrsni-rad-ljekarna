@@ -108,29 +108,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Artikl.cs" />
-    <Compile Include="Dobavljac.cs" />
     <Compile Include="DrugstoreModel.cs" />
-    <Compile Include="Farmaceut.cs" />
-    <Compile Include="JedinicaMjere.cs" />
-    <Compile Include="Lijecnik.cs" />
-    <Compile Include="Narudzba.cs" />
-    <Compile Include="Pacijent.cs" />
-    <Compile Include="Podaci.cs" />
-    <Compile Include="Primka.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Racun.cs" />
-    <Compile Include="Recept.cs" />
-    <Compile Include="StatusNarudzbe.cs" />
-    <Compile Include="StavkeNarudzbe.cs" />
-    <Compile Include="StavkePrimke.cs" />
-    <Compile Include="StavkeRacuna.cs" />
-    <Compile Include="StavkeRecepta.cs" />
-    <Compile Include="Ustanova.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntitiesLayer\EntitiesLayer.csproj">
+      <Project>{ed06da00-1871-4665-b9c8-070359627011}</Project>
+      <Name>EntitiesLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

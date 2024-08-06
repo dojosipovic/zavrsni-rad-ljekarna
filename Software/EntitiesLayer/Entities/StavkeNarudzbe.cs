@@ -1,13 +1,12 @@
-namespace DataAccessLayer
+namespace EntitiesLayer.Entities
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    [Table("StavkeRacuna")]
-    public partial class StavkeRacuna
+    [Table("StavkeNarudzbe")]
+    public partial class StavkeNarudzbe
     {
         [Key]
         [Column(Order = 0)]
@@ -17,12 +16,12 @@ namespace DataAccessLayer
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int RacunID { get; set; }
+        public int NarudzbaID { get; set; }
 
         public int Kolicina { get; set; }
 
         public virtual Artikl Artikl { get; set; }
 
-        public virtual Racun Racun { get; set; }
+        public virtual Narudzba Narudzba { get; set; }
     }
 }

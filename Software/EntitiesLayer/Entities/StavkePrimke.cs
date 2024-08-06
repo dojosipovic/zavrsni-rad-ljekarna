@@ -1,18 +1,17 @@
-namespace DataAccessLayer
+namespace EntitiesLayer.Entities
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    [Table("StavkeRecepta")]
-    public partial class StavkeRecepta
+    [Table("StavkePrimke")]
+    public partial class StavkePrimke
     {
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ReceptID { get; set; }
+        public int PrimkaID { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -23,6 +22,6 @@ namespace DataAccessLayer
 
         public virtual Artikl Artikl { get; set; }
 
-        public virtual Recept Recept { get; set; }
+        public virtual Primka Primka { get; set; }
     }
 }
