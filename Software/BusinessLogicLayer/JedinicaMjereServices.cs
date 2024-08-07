@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class ArtiklServices
+    public class JedinicaMjereServices
     {
-        public List<Artikl> GetAll()
+        public List<JedinicaMjere> GetAll()
         {
-            using(var repo = new ArtiklRepository())
+            using(var repo = new JedinicaMjereRepository())
             {
                 return repo.GetAll().ToList();
             }

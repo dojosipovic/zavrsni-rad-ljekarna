@@ -46,6 +46,7 @@
     <Compile Include="Entities\Dobavljac.cs" />
     <Compile Include="Entities\Farmaceut.cs" />
     <Compile Include="Entities\JedinicaMjere.cs" />
+    <Compile Include="Entities\JedinicaMjere.Ext.cs" />
     <Compile Include="Entities\Lijecnik.cs" />
     <Compile Include="Entities\Narudzba.cs" />
     <Compile Include="Entities\Pacijent.cs" />

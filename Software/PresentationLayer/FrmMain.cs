@@ -14,6 +14,7 @@ namespace PresentationLayer
     {
         bool documentsPanelExpand = false;
         bool dataPanelExpand = false;
+        bool catalogPanelExpand = false;
 
         public FrmMain()
         {
@@ -55,7 +56,7 @@ namespace PresentationLayer
 
         private void dataTransition_Tick(object sender, EventArgs e)
         {
-            ToggleTransition(ref dataPanel, ref dataPanelExpand, ref dataTransition, 200);
+            ToggleTransition(ref dataPanel, ref dataPanelExpand, ref dataTransition, 150);
         }
 
         private void btnDocuments_Click(object sender, EventArgs e)
@@ -90,6 +91,22 @@ namespace PresentationLayer
         private string GetTitleFromSender(object sender)
         {
             return sender.ToString().Split(':')[1].Trim();
+        }
+
+        private void btnMeasureUnits_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new MeasureUnit());
+        }
+
+        private void catalogTransition_Tick(object sender, EventArgs e)
+        {
+            ToggleTransition(ref catalogPanel, ref catalogPanelExpand, ref catalogTransition, 200);
+        }
+
+        private void btnCatalog_Click(object sender, EventArgs e)
+        {
+            catalogTransition.Start();
         }
     }
 }

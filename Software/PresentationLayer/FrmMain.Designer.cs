@@ -50,11 +50,19 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnItems = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnMeasureUnits = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnHospital = new System.Windows.Forms.Button();
             this.documentsTransition = new System.Windows.Forms.Timer(this.components);
             this.dataTransition = new System.Windows.Forms.Timer(this.components);
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnCatalog = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnDoctor = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnPatients = new System.Windows.Forms.Button();
+            this.catalogPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.catalogTransition = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.documentsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,6 +76,10 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.catalogPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -77,6 +89,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
             this.flowLayoutPanel1.Controls.Add(this.documentsPanel);
             this.flowLayoutPanel1.Controls.Add(this.dataPanel);
+            this.flowLayoutPanel1.Controls.Add(this.catalogPanel);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -257,11 +270,10 @@
             this.dataPanel.Controls.Add(this.panel7);
             this.dataPanel.Controls.Add(this.panel8);
             this.dataPanel.Controls.Add(this.panel9);
-            this.dataPanel.Controls.Add(this.panel10);
             this.dataPanel.Location = new System.Drawing.Point(0, 50);
             this.dataPanel.Margin = new System.Windows.Forms.Padding(0);
             this.dataPanel.Name = "dataPanel";
-            this.dataPanel.Size = new System.Drawing.Size(210, 200);
+            this.dataPanel.Size = new System.Drawing.Size(210, 50);
             this.dataPanel.TabIndex = 8;
             // 
             // panel7
@@ -318,53 +330,54 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.button9);
+            this.panel9.Controls.Add(this.btnMeasureUnits);
             this.panel9.Location = new System.Drawing.Point(0, 100);
             this.panel9.Margin = new System.Windows.Forms.Padding(0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(210, 50);
             this.panel9.TabIndex = 5;
             // 
-            // button9
+            // btnMeasureUnits
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.button9.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(-14, -12);
-            this.button9.Margin = new System.Windows.Forms.Padding(0);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(244, 78);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Jedinice mjere";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnMeasureUnits.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMeasureUnits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnMeasureUnits.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMeasureUnits.Image = ((System.Drawing.Image)(resources.GetObject("btnMeasureUnits.Image")));
+            this.btnMeasureUnits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMeasureUnits.Location = new System.Drawing.Point(-14, -12);
+            this.btnMeasureUnits.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMeasureUnits.Name = "btnMeasureUnits";
+            this.btnMeasureUnits.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnMeasureUnits.Size = new System.Drawing.Size(244, 78);
+            this.btnMeasureUnits.TabIndex = 1;
+            this.btnMeasureUnits.Text = "Jedinice mjere";
+            this.btnMeasureUnits.UseVisualStyleBackColor = false;
+            this.btnMeasureUnits.Click += new System.EventHandler(this.btnMeasureUnits_Click);
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.button10);
+            this.panel10.Controls.Add(this.btnHospital);
             this.panel10.Location = new System.Drawing.Point(0, 150);
             this.panel10.Margin = new System.Windows.Forms.Padding(0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(210, 50);
             this.panel10.TabIndex = 6;
             // 
-            // button10
+            // btnHospital
             // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.button10.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(-14, -12);
-            this.button10.Margin = new System.Windows.Forms.Padding(0);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(244, 78);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "Ustanova";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnHospital.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnHospital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnHospital.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHospital.Image = ((System.Drawing.Image)(resources.GetObject("btnHospital.Image")));
+            this.btnHospital.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHospital.Location = new System.Drawing.Point(-14, -12);
+            this.btnHospital.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHospital.Name = "btnHospital";
+            this.btnHospital.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnHospital.Size = new System.Drawing.Size(244, 78);
+            this.btnHospital.TabIndex = 1;
+            this.btnHospital.Text = "Ustanove";
+            this.btnHospital.UseVisualStyleBackColor = false;
             // 
             // documentsTransition
             // 
@@ -376,11 +389,105 @@
             this.dataTransition.Interval = 10;
             this.dataTransition.Tick += new System.EventHandler(this.dataTransition_Tick);
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnCatalog);
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(210, 50);
+            this.panel11.TabIndex = 2;
+            // 
+            // btnCatalog
+            // 
+            this.btnCatalog.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCatalog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
+            this.btnCatalog.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCatalog.Image = ((System.Drawing.Image)(resources.GetObject("btnCatalog.Image")));
+            this.btnCatalog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCatalog.Location = new System.Drawing.Point(-14, -12);
+            this.btnCatalog.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCatalog.Name = "btnCatalog";
+            this.btnCatalog.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnCatalog.Size = new System.Drawing.Size(244, 78);
+            this.btnCatalog.TabIndex = 1;
+            this.btnCatalog.Text = "Katalog";
+            this.btnCatalog.UseVisualStyleBackColor = false;
+            this.btnCatalog.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btnDoctor);
+            this.panel12.Location = new System.Drawing.Point(0, 50);
+            this.panel12.Margin = new System.Windows.Forms.Padding(0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(210, 50);
+            this.panel12.TabIndex = 4;
+            // 
+            // btnDoctor
+            // 
+            this.btnDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnDoctor.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctor.Image = ((System.Drawing.Image)(resources.GetObject("btnDoctor.Image")));
+            this.btnDoctor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoctor.Location = new System.Drawing.Point(-14, -12);
+            this.btnDoctor.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDoctor.Name = "btnDoctor";
+            this.btnDoctor.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnDoctor.Size = new System.Drawing.Size(244, 78);
+            this.btnDoctor.TabIndex = 1;
+            this.btnDoctor.Text = "Lijecnici";
+            this.btnDoctor.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnPatients);
+            this.panel13.Location = new System.Drawing.Point(0, 100);
+            this.panel13.Margin = new System.Windows.Forms.Padding(0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(210, 50);
+            this.panel13.TabIndex = 5;
+            // 
+            // btnPatients
+            // 
+            this.btnPatients.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPatients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnPatients.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatients.Image = ((System.Drawing.Image)(resources.GetObject("btnPatients.Image")));
+            this.btnPatients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPatients.Location = new System.Drawing.Point(-14, -12);
+            this.btnPatients.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPatients.Name = "btnPatients";
+            this.btnPatients.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnPatients.Size = new System.Drawing.Size(244, 78);
+            this.btnPatients.TabIndex = 1;
+            this.btnPatients.Text = "Pacijenti";
+            this.btnPatients.UseVisualStyleBackColor = false;
+            // 
+            // catalogPanel
+            // 
+            this.catalogPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
+            this.catalogPanel.Controls.Add(this.panel11);
+            this.catalogPanel.Controls.Add(this.panel12);
+            this.catalogPanel.Controls.Add(this.panel13);
+            this.catalogPanel.Controls.Add(this.panel10);
+            this.catalogPanel.Location = new System.Drawing.Point(0, 100);
+            this.catalogPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.catalogPanel.Name = "catalogPanel";
+            this.catalogPanel.Size = new System.Drawing.Size(210, 200);
+            this.catalogPanel.TabIndex = 9;
+            // 
+            // catalogTransition
+            // 
+            this.catalogTransition.Interval = 10;
+            this.catalogTransition.Tick += new System.EventHandler(this.catalogTransition_Tick);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1109, 450);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.IsMdiContainer = true;
@@ -399,6 +506,10 @@
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.catalogPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -425,10 +536,18 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnMeasureUnits;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnHospital;
         private System.Windows.Forms.Timer documentsTransition;
         private System.Windows.Forms.Timer dataTransition;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnCatalog;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button btnDoctor;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button btnPatients;
+        private System.Windows.Forms.FlowLayoutPanel catalogPanel;
+        private System.Windows.Forms.Timer catalogTransition;
     }
 }

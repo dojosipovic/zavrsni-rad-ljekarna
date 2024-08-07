@@ -1,6 +1,7 @@
 ﻿using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,11 @@ namespace DataAccessLayer.Repositories
     {
         public ArtiklRepository() : base(new DrugstoreModel())
         {
+        }
+
+        public override IQueryable<Artikl> GetAll()
+        {
+            return base.GetAll().Include("JedinicaMjere");
         }
 
         public override int Update(Artikl entity, bool saveChanges = true)
