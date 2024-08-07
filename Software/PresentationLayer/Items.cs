@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class Form1 : Form
+    public partial class Items : Form
     {
-        public Form1()
+        public Items()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 frm2 = new Form2();
-            frm2.ShowDialog();
         }
     }
 }

@@ -43,12 +43,12 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.dataPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnData = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnItems = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -76,6 +76,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
             this.flowLayoutPanel1.Controls.Add(this.documentsPanel);
+            this.flowLayoutPanel1.Controls.Add(this.dataPanel);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -93,7 +94,7 @@
             this.documentsPanel.Location = new System.Drawing.Point(0, 0);
             this.documentsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.documentsPanel.Name = "documentsPanel";
-            this.documentsPanel.Size = new System.Drawing.Size(210, 250);
+            this.documentsPanel.Size = new System.Drawing.Size(210, 50);
             this.documentsPanel.TabIndex = 3;
             // 
             // panel1
@@ -226,29 +227,29 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Location = new System.Drawing.Point(0, 400);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(210, 50);
             this.panel2.TabIndex = 3;
             // 
-            // button2
+            // btnLogout
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
-            this.button2.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-14, -12);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(244, 78);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Odjava";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
+            this.btnLogout.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(-14, -12);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(244, 78);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Odjava";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // dataPanel
             // 
@@ -257,7 +258,7 @@
             this.dataPanel.Controls.Add(this.panel8);
             this.dataPanel.Controls.Add(this.panel9);
             this.dataPanel.Controls.Add(this.panel10);
-            this.dataPanel.Location = new System.Drawing.Point(568, 241);
+            this.dataPanel.Location = new System.Drawing.Point(0, 50);
             this.dataPanel.Margin = new System.Windows.Forms.Padding(0);
             this.dataPanel.Name = "dataPanel";
             this.dataPanel.Size = new System.Drawing.Size(210, 200);
@@ -291,28 +292,29 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button8);
+            this.panel8.Controls.Add(this.btnItems);
             this.panel8.Location = new System.Drawing.Point(0, 50);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(210, 50);
             this.panel8.TabIndex = 4;
             // 
-            // button8
+            // btnItems
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.button8.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(-14, -12);
-            this.button8.Margin = new System.Windows.Forms.Padding(0);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(244, 78);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Artikli";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnItems.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnItems.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItems.Image = ((System.Drawing.Image)(resources.GetObject("btnItems.Image")));
+            this.btnItems.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnItems.Location = new System.Drawing.Point(-14, -12);
+            this.btnItems.Margin = new System.Windows.Forms.Padding(0);
+            this.btnItems.Name = "btnItems";
+            this.btnItems.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnItems.Size = new System.Drawing.Size(244, 78);
+            this.btnItems.TabIndex = 1;
+            this.btnItems.Text = "Artikli";
+            this.btnItems.UseVisualStyleBackColor = false;
+            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
             // 
             // panel9
             // 
@@ -381,7 +383,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataPanel);
             this.IsMdiContainer = true;
             this.Name = "FrmMain";
             this.Text = "FrmMain";
@@ -409,7 +410,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel documentsPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnRecipes;
         private System.Windows.Forms.Panel panel4;
@@ -422,7 +423,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnData;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel10;

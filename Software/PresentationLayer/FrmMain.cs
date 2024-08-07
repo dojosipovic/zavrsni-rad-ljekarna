@@ -65,15 +65,31 @@ namespace PresentationLayer
 
         private void btnRecipes_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
-            frm1.MdiParent = this;
-            frm1.Dock = DockStyle.Fill;
-            frm1.Show();
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Form1());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Items());
+        }
+
+        private void OpenForm(Form form)
+        {
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private string GetTitleFromSender(object sender)
+        {
+            return sender.ToString().Split(':')[1].Trim();
         }
     }
 }
