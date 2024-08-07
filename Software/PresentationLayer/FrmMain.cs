@@ -108,5 +108,23 @@ namespace PresentationLayer
         {
             catalogTransition.Start();
         }
+
+        private void btnDoctor_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Doctors());
+        }
+
+        private void btnPatients_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Patients());
+        }
+
+        private void btnHospital_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Hospitals());
+        }
     }
 }

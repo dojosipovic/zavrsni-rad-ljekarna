@@ -378,6 +378,7 @@
             this.btnHospital.TabIndex = 1;
             this.btnHospital.Text = "Ustanove";
             this.btnHospital.UseVisualStyleBackColor = false;
+            this.btnHospital.Click += new System.EventHandler(this.btnHospital_Click);
             // 
             // documentsTransition
             // 
@@ -439,6 +440,7 @@
             this.btnDoctor.TabIndex = 1;
             this.btnDoctor.Text = "Lijecnici";
             this.btnDoctor.UseVisualStyleBackColor = false;
+            this.btnDoctor.Click += new System.EventHandler(this.btnDoctor_Click);
             // 
             // panel13
             // 
@@ -464,6 +466,7 @@
             this.btnPatients.TabIndex = 1;
             this.btnPatients.Text = "Pacijenti";
             this.btnPatients.UseVisualStyleBackColor = false;
+            this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
             // 
             // catalogPanel
             // 

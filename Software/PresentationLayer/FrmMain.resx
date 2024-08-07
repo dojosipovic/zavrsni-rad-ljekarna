@@ -118,6 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnHospital.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM3SURBVFhHxZTL
+        TxNRFMZh495/Qf8L3Kob42OF4bGSgPJUFrSoGwSFklgwMQHBkLhQgwkPF7ShgUjxUWmx0iKkbaDQWip9
+        ANENtD5yvN90pp2ZzJQpHcJJvuTOued85ze9d1qiJaij41SqqfPWfmOXUYtQix6+vfg4aH5QddDUSQWq
+        km8vPtgb1SkMoPTAK05Ke+jh24sPRYC2XhICa/n+sQL8HrXQv7UQP564NXLimmMF+Ote5UfnAjlxjS4A
+        zLc0HP55et9gviM2T5uG6c+4LTOZBdapniEJAHrQy7ZLebvCYyuWuL8VS9KOdV5izqm1myiVZhcgxa3l
+        ++hBLzx4u8IjGk+YVAEOkQAAD96u8BAA4i4vHbR0KQ5SFKuNu5b1A+CMgt9p2xfUpOhGhP/5dQQ4qnQB
+        CMcS5AgnyBlKUoQ3XosmyRFieaZ1tkYOewusBrXo0Q1gLJCgq/YYJ/tmxrjPk8v1ezM57Ak59GgGWPT6
+        7rk8viG51kJbSzCZXk9Qxfs4VX2IkSuceduR1UwOwho5J9tDDXK2YCYHDyVvzOTHMwCPb48lSS5/MMyZ
+        FCN4KHljJj8+B/DC4SeT3U/v3PoDwBPemKEKUD4VoLLxAA1/lAJsRrbJvewnt1ejWC16xADwhDdmqAL0
+        MsJGm58si1IAGL55O1OQ0CMGgCe8MUMVQK4sAHsrpSH5hB4xgFyKADPsnCacflrgi/QEgCe8MUMVoMLi
+        585pxCEFWAls0KTVThPWORqz2LN6OTXPSZxDDWrRIwaAJ7wrp/IcQcN0gC5MBmh0QQoAff2WuTy3P0Wy
+        fzbnrSFOwjP2UINaoU8AgCe8G2x5LqFcSgDNzh8SgIvTYU0Ach0ZoH5ph66JAC7N5n6RogG0HEG9Z4+q
+        v+xmAa7MRanckTwUQNMRqF1COUDdyi+qXtzNAtSy5+ufk3kBNF1Ctc9QCQC6zIYDQHjG8aBGCUD4DGfz
+        fYZyHQaA4RIAtocaJQC5sgA1TXfPPXw8kH5kHiS5evqfkenJEKfuvkFOBvMwtZqfc7r59DUn4Rl7Qp3Q
+        Bw8lb8ysbTGWMQCjgYlOSIaSuua2szWN7caT0I369jP/AThwg5jOWrvQAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnDocuments.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -294,26 +314,6 @@
         Rpx+aiDQd/vv5Qof2Xax2hKcysREHc7Hum0am0RDrF48WriDwlkJ/SWrMGEFTpXExHQMHm/9Acd85aL+
         p9dqeQaWh53RinpPEQuwohQ1EYdDtl0nczdlOvLnmmuvJuB4HEpN5GawC6ejJCY0cMiW6ci7JBsgMKFk
         Ao+DmbAe6UwY4JAt036lESaQCf3JjRBMoNp5cEKI7T+Qr32MDhu1UAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnHospital.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM3SURBVFhHxZTL
-        TxNRFMZh495/Qf8L3Kob42OF4bGSgPJUFrSoGwSFklgwMQHBkLhQgwkPF7ShgUjxUWmx0iKkbaDQWip9
-        ANENtD5yvN90pp2ZzJQpHcJJvuTOued85ze9d1qiJaij41SqqfPWfmOXUYtQix6+vfg4aH5QddDUSQWq
-        km8vPtgb1SkMoPTAK05Ke+jh24sPRYC2XhICa/n+sQL8HrXQv7UQP564NXLimmMF+Ote5UfnAjlxjS4A
-        zLc0HP55et9gviM2T5uG6c+4LTOZBdapniEJAHrQy7ZLebvCYyuWuL8VS9KOdV5izqm1myiVZhcgxa3l
-        ++hBLzx4u8IjGk+YVAEOkQAAD96u8BAA4i4vHbR0KQ5SFKuNu5b1A+CMgt9p2xfUpOhGhP/5dQQ4qnQB
-        CMcS5AgnyBlKUoQ3XosmyRFieaZ1tkYOewusBrXo0Q1gLJCgq/YYJ/tmxrjPk8v1ezM57Ak59GgGWPT6
-        7rk8viG51kJbSzCZXk9Qxfs4VX2IkSuceduR1UwOwho5J9tDDXK2YCYHDyVvzOTHMwCPb48lSS5/MMyZ
-        FCN4KHljJj8+B/DC4SeT3U/v3PoDwBPemKEKUD4VoLLxAA1/lAJsRrbJvewnt1ejWC16xADwhDdmqAL0
-        MsJGm58si1IAGL55O1OQ0CMGgCe8MUMVQK4sAHsrpSH5hB4xgFyKADPsnCacflrgi/QEgCe8MUMVoMLi
-        585pxCEFWAls0KTVThPWORqz2LN6OTXPSZxDDWrRIwaAJ7wrp/IcQcN0gC5MBmh0QQoAff2WuTy3P0Wy
-        fzbnrSFOwjP2UINaoU8AgCe8G2x5LqFcSgDNzh8SgIvTYU0Ach0ZoH5ph66JAC7N5n6RogG0HEG9Z4+q
-        v+xmAa7MRanckTwUQNMRqF1COUDdyi+qXtzNAtSy5+ufk3kBNF1Ctc9QCQC6zIYDQHjG8aBGCUD4DGfz
-        fYZyHQaA4RIAtocaJQC5sgA1TXfPPXw8kH5kHiS5evqfkenJEKfuvkFOBvMwtZqfc7r59DUn4Rl7Qp3Q
-        Bw8lb8ysbTGWMQCjgYlOSIaSuua2szWN7caT0I369jP/AThwg5jOWrvQAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="documentsTransition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
