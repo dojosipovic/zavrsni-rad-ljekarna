@@ -62,5 +62,18 @@ namespace PresentationLayer
         {
             documentsTransition.Start();
         }
+
+        private void btnRecipes_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+            frm1.MdiParent = this;
+            frm1.Dock = DockStyle.Fill;
+            frm1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
