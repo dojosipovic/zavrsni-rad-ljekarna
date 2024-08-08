@@ -42,8 +42,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.dataPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnData = new System.Windows.Forms.Button();
@@ -51,17 +49,19 @@
             this.btnItems = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnMeasureUnits = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnHospital = new System.Windows.Forms.Button();
-            this.documentsTransition = new System.Windows.Forms.Timer(this.components);
-            this.dataTransition = new System.Windows.Forms.Timer(this.components);
+            this.catalogPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnCatalog = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnDoctor = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnPatients = new System.Windows.Forms.Button();
-            this.catalogPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnHospital = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.documentsTransition = new System.Windows.Forms.Timer(this.components);
+            this.dataTransition = new System.Windows.Forms.Timer(this.components);
             this.catalogTransition = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.documentsPanel.SuspendLayout();
@@ -70,16 +70,16 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.dataPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.catalogPanel.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.catalogPanel.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -107,7 +107,7 @@
             this.documentsPanel.Location = new System.Drawing.Point(0, 0);
             this.documentsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.documentsPanel.Name = "documentsPanel";
-            this.documentsPanel.Size = new System.Drawing.Size(210, 50);
+            this.documentsPanel.Size = new System.Drawing.Size(210, 250);
             this.documentsPanel.TabIndex = 3;
             // 
             // panel1
@@ -237,40 +237,13 @@
             this.button6.Text = "Narudžbe";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Location = new System.Drawing.Point(0, 400);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 50);
-            this.panel2.TabIndex = 3;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
-            this.btnLogout.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(-14, -12);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(244, 78);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Odjava";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // dataPanel
             // 
             this.dataPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
             this.dataPanel.Controls.Add(this.panel7);
             this.dataPanel.Controls.Add(this.panel8);
             this.dataPanel.Controls.Add(this.panel9);
-            this.dataPanel.Location = new System.Drawing.Point(0, 50);
+            this.dataPanel.Location = new System.Drawing.Point(0, 250);
             this.dataPanel.Margin = new System.Windows.Forms.Padding(0);
             this.dataPanel.Name = "dataPanel";
             this.dataPanel.Size = new System.Drawing.Size(210, 50);
@@ -354,41 +327,18 @@
             this.btnMeasureUnits.UseVisualStyleBackColor = false;
             this.btnMeasureUnits.Click += new System.EventHandler(this.btnMeasureUnits_Click);
             // 
-            // panel10
+            // catalogPanel
             // 
-            this.panel10.Controls.Add(this.btnHospital);
-            this.panel10.Location = new System.Drawing.Point(0, 150);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(210, 50);
-            this.panel10.TabIndex = 6;
-            // 
-            // btnHospital
-            // 
-            this.btnHospital.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHospital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.btnHospital.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHospital.Image = ((System.Drawing.Image)(resources.GetObject("btnHospital.Image")));
-            this.btnHospital.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHospital.Location = new System.Drawing.Point(-14, -12);
-            this.btnHospital.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHospital.Name = "btnHospital";
-            this.btnHospital.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnHospital.Size = new System.Drawing.Size(244, 78);
-            this.btnHospital.TabIndex = 1;
-            this.btnHospital.Text = "Ustanove";
-            this.btnHospital.UseVisualStyleBackColor = false;
-            this.btnHospital.Click += new System.EventHandler(this.btnHospital_Click);
-            // 
-            // documentsTransition
-            // 
-            this.documentsTransition.Interval = 10;
-            this.documentsTransition.Tick += new System.EventHandler(this.documentsTransition_Tick);
-            // 
-            // dataTransition
-            // 
-            this.dataTransition.Interval = 10;
-            this.dataTransition.Tick += new System.EventHandler(this.dataTransition_Tick);
+            this.catalogPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
+            this.catalogPanel.Controls.Add(this.panel11);
+            this.catalogPanel.Controls.Add(this.panel12);
+            this.catalogPanel.Controls.Add(this.panel13);
+            this.catalogPanel.Controls.Add(this.panel10);
+            this.catalogPanel.Location = new System.Drawing.Point(0, 300);
+            this.catalogPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.catalogPanel.Name = "catalogPanel";
+            this.catalogPanel.Size = new System.Drawing.Size(210, 200);
+            this.catalogPanel.TabIndex = 9;
             // 
             // panel11
             // 
@@ -468,18 +418,68 @@
             this.btnPatients.UseVisualStyleBackColor = false;
             this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
             // 
-            // catalogPanel
+            // panel10
             // 
-            this.catalogPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
-            this.catalogPanel.Controls.Add(this.panel11);
-            this.catalogPanel.Controls.Add(this.panel12);
-            this.catalogPanel.Controls.Add(this.panel13);
-            this.catalogPanel.Controls.Add(this.panel10);
-            this.catalogPanel.Location = new System.Drawing.Point(0, 100);
-            this.catalogPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.catalogPanel.Name = "catalogPanel";
-            this.catalogPanel.Size = new System.Drawing.Size(210, 200);
-            this.catalogPanel.TabIndex = 9;
+            this.panel10.Controls.Add(this.btnHospital);
+            this.panel10.Location = new System.Drawing.Point(0, 150);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(210, 50);
+            this.panel10.TabIndex = 6;
+            // 
+            // btnHospital
+            // 
+            this.btnHospital.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnHospital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnHospital.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHospital.Image = ((System.Drawing.Image)(resources.GetObject("btnHospital.Image")));
+            this.btnHospital.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHospital.Location = new System.Drawing.Point(-14, -12);
+            this.btnHospital.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHospital.Name = "btnHospital";
+            this.btnHospital.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnHospital.Size = new System.Drawing.Size(244, 78);
+            this.btnHospital.TabIndex = 1;
+            this.btnHospital.Text = "Ustanove";
+            this.btnHospital.UseVisualStyleBackColor = false;
+            this.btnHospital.Click += new System.EventHandler(this.btnHospital_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.Controls.Add(this.btnLogout);
+            this.panel2.Location = new System.Drawing.Point(0, 400);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(210, 50);
+            this.panel2.TabIndex = 3;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
+            this.btnLogout.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(-14, -12);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(244, 78);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Odjava";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // documentsTransition
+            // 
+            this.documentsTransition.Interval = 10;
+            this.documentsTransition.Tick += new System.EventHandler(this.documentsTransition_Tick);
+            // 
+            // dataTransition
+            // 
+            this.dataTransition.Interval = 10;
+            this.dataTransition.Tick += new System.EventHandler(this.dataTransition_Tick);
             // 
             // catalogTransition
             // 
@@ -503,16 +503,16 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.dataPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
+            this.catalogPanel.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            this.catalogPanel.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
