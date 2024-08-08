@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArtiklServices.cs" />
+    <Compile Include="Exceptions\DrugstoreException.cs" />
+    <Compile Include="Exceptions\LoginException.cs" />
+    <Compile Include="FarmaceusServices.cs" />
     <Compile Include="JedinicaMjereServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
