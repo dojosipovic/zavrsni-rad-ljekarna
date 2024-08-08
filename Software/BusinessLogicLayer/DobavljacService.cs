@@ -20,7 +20,27 @@ namespace BusinessLogicLayer
             }
         }
 
+        public async Task<bool> Remove(Dobavljac dobavljac)
+        {
+            using(var repo = new DobavljacRepository())
+            {
+                int affectedRows = await Task.Run(() => repo.Remove(dobavljac));
+                return affectedRows > 0;
+            }
+        }
+
         public async Task<bool> Add(Dobavljac dobavljac)
+        {
+            VerifyData(dobavljac);
+
+            using (var repo = new DobavljacRepository())
+            {
+                int affectedRows = await Task.Run(() => repo.Add(dobavljac));
+                return affectedRows > 0;
+            }
+        }
+
+        private static void VerifyData(Dobavljac dobavljac)
         {
             if (!Regex.IsMatch(dobavljac.OIB, @"^\d{11}$"))
                 throw new DobavljacException("OIB mora sadržavati 11 znamenaka!");
@@ -32,10 +52,15 @@ namespace BusinessLogicLayer
                 throw new DobavljacException("Email nije ispravan!");
             if (dobavljac.Adresa.Length == 0 || dobavljac.Adresa.Length > 200)
                 throw new DobavljacException("Adresa mora biti duga do 200 znakova!");
+        }
+
+        public async Task<bool> Update(Dobavljac dobavljac)
+        {
+            VerifyData(dobavljac);
 
             using (var repo = new DobavljacRepository())
             {
-                int affectedRows = await Task.Run(() => repo.Add(dobavljac));
+                int affectedRows = await Task.Run(() => repo.Update(dobavljac));
                 return affectedRows > 0;
             }
         }

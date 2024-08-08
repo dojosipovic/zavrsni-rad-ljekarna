@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -59,11 +61,25 @@ namespace PresentationLayer
                 {
                     await jedinicaMjereServices.Remove(measureUnit);
                     await RefreshGUI();
-                } catch
+                } catch (DbUpdateException ex)
                 {
-                    MessageBox.Show("Ne možete obrisati jedinicu na koju su povezani artikli!");
+                    if (ex.InnerException?.InnerException is SqlException sqlEx)
+                    {
+                        string message = GetErrorMessage(sqlEx);
+                        MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    } else MessageBox.Show("Greška prilikom brisanja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Neočekivana greška!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private string GetErrorMessage(SqlException sqlEx)
+        {
+            string message = sqlEx.Message;
+            if (message.Contains("FK_Artikl_JedinicaMjere")) return "Neki artikli koriste ovu jedinicu!";
+            return "Greška prilikom brisanja!";
         }
     }
 }

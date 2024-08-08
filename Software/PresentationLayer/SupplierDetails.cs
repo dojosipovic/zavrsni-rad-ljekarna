@@ -45,37 +45,39 @@ namespace PresentationLayer
         private async void btnSave_Click(object sender, EventArgs e)
         {
             bool success = true;
-            if (_dobavljac == null)
+            try
             {
-                try
+                var supplier = new Dobavljac
                 {
-                    var supplier = new Dobavljac
-                    {
-                        OIB = txtOIB.Text.Trim(),
-                        Naziv = txtName.Text.Trim(),
-                        Adresa = txtAddress.Text.Trim(),
-                        Email = txtEmail.Text.Trim(),
-                        IBAN = txtIBAN.Text.Trim(),
-                    };
-                    await dobavljacService.Add(supplier);
-                } catch (DobavljacException ex)
+                    OIB = txtOIB.Text.Trim(),
+                    Naziv = txtName.Text.Trim(),
+                    Adresa = txtAddress.Text.Trim(),
+                    Email = txtEmail.Text.Trim(),
+                    IBAN = txtIBAN.Text.Trim(),
+                };
+                if (_dobavljac == null) await dobavljacService.Add(supplier);
+                else
                 {
-                    success = false;
-                    MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } catch (DbUpdateException ex)
-                {
-                    if (ex.InnerException?.InnerException is SqlException sqlEx)
-                    {
-                        string message = GetErrorMessage(sqlEx);
-                        MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else MessageBox.Show("Greška prilikom dodavanja", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    success = false;
-                } catch (Exception ex)
-                {
-                    MessageBox.Show("Neočekivana greška", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    success = false;
+                    supplier.ID = _dobavljac.ID;
+                    await dobavljacService.Update(supplier);
                 }
+            } catch (DobavljacException ex)
+            {
+                success = false;
+                MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (DbUpdateException ex)
+            {
+                if (ex.InnerException?.InnerException is SqlException sqlEx)
+                {
+                    string message = GetErrorMessage(sqlEx);
+                    MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else MessageBox.Show("Greška prilikom dodavanja", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                success = false;
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Neočekivana greška", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                success = false;
             }
 
             if (success) Close();

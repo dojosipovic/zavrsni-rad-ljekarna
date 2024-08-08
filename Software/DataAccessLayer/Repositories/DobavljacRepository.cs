@@ -14,7 +14,15 @@ namespace DataAccessLayer.Repositories
         }
         public override int Update(Dobavljac entity, bool saveChanges = true)
         {
-            throw new NotImplementedException();
+            var supplier = Entities.SingleOrDefault(s => s.ID == entity.ID);
+
+            supplier.IBAN = entity.IBAN;
+            supplier.Naziv = entity.Naziv;
+            supplier.OIB = entity.OIB;
+            supplier.Adresa = entity.Adresa;
+            supplier.Email = entity.Email;
+
+            return saveChanges ? SaveChanges() : 0;
         }
     }
 }

@@ -5,12 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PresentationLayer
 {
@@ -43,42 +45,48 @@ namespace PresentationLayer
         private async void btnSave_Click(object sender, EventArgs e)
         {
             bool success = true;
-            if (_measureUnit == null)
+            try
             {
-                try
+                string id = txtID.Text.Trim();
+                string name = txtName.Text.Trim();
+                var measureUnit = new JedinicaMjere { Naziv = name };
+
+                if (_measureUnit != null)
                 {
-                    string id = txtID.Text.Trim();
-                    string name = txtName.Text.Trim();
-                    var measureUnit = new JedinicaMjere { ID = id, Naziv = name };
+                    measureUnit.ID = _measureUnit.ID;
+                    await jedinicaMjereServices.Update(measureUnit);
+                } else
+                {
+                    measureUnit.ID = id;
                     await jedinicaMjereServices.Add(measureUnit);
-                } catch (JedinicaMjereException ex)
-                {
-                    MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    success = false;
-                } catch (Exception ex)
-                {
-                    MessageBox.Show("ID ili Naziv već postoje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    success = false;
                 }
-            }
-            else
+            } catch (JedinicaMjereException ex)
             {
-                try
+                MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                success = false;
+            } catch (DbUpdateException ex)
+            {
+                if (ex.InnerException?.InnerException is SqlException sqlEx)
                 {
-                    _measureUnit.Naziv = txtName.Text.Trim();
-                    await jedinicaMjereServices.Update(_measureUnit);
-                } catch (JedinicaMjereException ex)
-                {
-                    MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    success = false;
-                } catch (Exception ex)
-                {
-                    MessageBox.Show("Naziv već postoji!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    success = false;
-                }
+                    string message = GetErrorMessage(sqlEx);
+                    MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else MessageBox.Show("Greška prilikom dodavanja", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                success = false;
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Neočekivana greška", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                success = false;
             }
 
             if (success) Close();
+        }
+
+        private string GetErrorMessage(SqlException sqlEx)
+        {
+            string message = sqlEx.Message;
+            if (message.Contains("IX_JedinicaMjere")) return "Takav naziv već postoji!";
+            if (message.Contains("PK_JedinicaMjere")) return "Takav ID već postoji!";
+            return "Greška prilikom dodavanja";
         }
     }
 }

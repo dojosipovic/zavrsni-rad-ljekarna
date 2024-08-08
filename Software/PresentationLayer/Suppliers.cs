@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -53,6 +55,37 @@ namespace PresentationLayer
             SupplierDetails supplierDetails = new SupplierDetails();
             supplierDetails.ShowDialog();
             await RefreshGUI();
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            var supplier = dgvSuppliers.CurrentRow?.DataBoundItem as Dobavljac;
+            if (supplier != null)
+            {
+                try
+                {
+                    await dobavljacService.Remove(supplier);
+                    await RefreshGUI();
+                } catch (DbUpdateException ex)
+                {
+                    if (ex.InnerException?.InnerException is SqlException sqlEx)
+                    {
+                        string message = GetErrorMessage(sqlEx);
+                        MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    } else MessageBox.Show("Greška prilikom brisanja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Neočekivana greška!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private string GetErrorMessage(SqlException sqlEx)
+        {
+            string message = sqlEx.Message;
+            if (message.Contains("FK_Narudzba_Dobavljac")) return "Dobavljač ima upisane narudžbe!";
+            if (message.Contains("FK_Primka_Dobavljac")) return "Dobavljač ima upisane primke!";
+            return "Greška prilikom brisanja!";
         }
     }
 }
