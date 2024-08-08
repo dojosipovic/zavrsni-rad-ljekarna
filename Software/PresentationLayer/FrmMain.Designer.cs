@@ -37,11 +37,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRecipes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnReceipt = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnInvoice = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnOrders = new System.Windows.Forms.Button();
             this.dataPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnData = new System.Windows.Forms.Button();
@@ -63,6 +63,8 @@
             this.documentsTransition = new System.Windows.Forms.Timer(this.components);
             this.dataTransition = new System.Windows.Forms.Timer(this.components);
             this.catalogTransition = new System.Windows.Forms.Timer(this.components);
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnSuppliers = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.documentsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,6 +82,7 @@
             this.panel13.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -107,7 +110,7 @@
             this.documentsPanel.Location = new System.Drawing.Point(0, 0);
             this.documentsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.documentsPanel.Name = "documentsPanel";
-            this.documentsPanel.Size = new System.Drawing.Size(210, 250);
+            this.documentsPanel.Size = new System.Drawing.Size(210, 50);
             this.documentsPanel.TabIndex = 3;
             // 
             // panel1
@@ -164,78 +167,81 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.btnReceipt);
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(210, 50);
             this.panel4.TabIndex = 5;
             // 
-            // button4
+            // btnReceipt
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.button4.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-14, -12);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(244, 78);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Primke";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnReceipt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnReceipt.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceipt.Image = ((System.Drawing.Image)(resources.GetObject("btnReceipt.Image")));
+            this.btnReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReceipt.Location = new System.Drawing.Point(-14, -12);
+            this.btnReceipt.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReceipt.Name = "btnReceipt";
+            this.btnReceipt.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnReceipt.Size = new System.Drawing.Size(244, 78);
+            this.btnReceipt.TabIndex = 1;
+            this.btnReceipt.Text = "Primke";
+            this.btnReceipt.UseVisualStyleBackColor = false;
+            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.btnInvoice);
             this.panel5.Location = new System.Drawing.Point(0, 150);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(210, 50);
             this.panel5.TabIndex = 6;
             // 
-            // button5
+            // btnInvoice
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.button5.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-14, -12);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(244, 78);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Racuni";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnInvoice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnInvoice.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoice.Image = ((System.Drawing.Image)(resources.GetObject("btnInvoice.Image")));
+            this.btnInvoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoice.Location = new System.Drawing.Point(-14, -12);
+            this.btnInvoice.Margin = new System.Windows.Forms.Padding(0);
+            this.btnInvoice.Name = "btnInvoice";
+            this.btnInvoice.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnInvoice.Size = new System.Drawing.Size(244, 78);
+            this.btnInvoice.TabIndex = 1;
+            this.btnInvoice.Text = "Racuni";
+            this.btnInvoice.UseVisualStyleBackColor = false;
+            this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.btnOrders);
             this.panel6.Location = new System.Drawing.Point(0, 200);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(210, 50);
             this.panel6.TabIndex = 7;
             // 
-            // button6
+            // btnOrders
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.button6.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-14, -12);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(244, 78);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Narudžbe";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnOrders.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnOrders.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.Image")));
+            this.btnOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrders.Location = new System.Drawing.Point(-14, -12);
+            this.btnOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnOrders.Size = new System.Drawing.Size(244, 78);
+            this.btnOrders.TabIndex = 1;
+            this.btnOrders.Text = "Narudžbe";
+            this.btnOrders.UseVisualStyleBackColor = false;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // dataPanel
             // 
@@ -243,7 +249,8 @@
             this.dataPanel.Controls.Add(this.panel7);
             this.dataPanel.Controls.Add(this.panel8);
             this.dataPanel.Controls.Add(this.panel9);
-            this.dataPanel.Location = new System.Drawing.Point(0, 250);
+            this.dataPanel.Controls.Add(this.panel14);
+            this.dataPanel.Location = new System.Drawing.Point(0, 50);
             this.dataPanel.Margin = new System.Windows.Forms.Padding(0);
             this.dataPanel.Name = "dataPanel";
             this.dataPanel.Size = new System.Drawing.Size(210, 50);
@@ -334,7 +341,7 @@
             this.catalogPanel.Controls.Add(this.panel12);
             this.catalogPanel.Controls.Add(this.panel13);
             this.catalogPanel.Controls.Add(this.panel10);
-            this.catalogPanel.Location = new System.Drawing.Point(0, 300);
+            this.catalogPanel.Location = new System.Drawing.Point(0, 100);
             this.catalogPanel.Margin = new System.Windows.Forms.Padding(0);
             this.catalogPanel.Name = "catalogPanel";
             this.catalogPanel.Size = new System.Drawing.Size(210, 200);
@@ -486,6 +493,32 @@
             this.catalogTransition.Interval = 10;
             this.catalogTransition.Tick += new System.EventHandler(this.catalogTransition_Tick);
             // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btnSuppliers);
+            this.panel14.Location = new System.Drawing.Point(0, 150);
+            this.panel14.Margin = new System.Windows.Forms.Padding(0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(210, 50);
+            this.panel14.TabIndex = 6;
+            // 
+            // btnSuppliers
+            // 
+            this.btnSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnSuppliers.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("btnSuppliers.Image")));
+            this.btnSuppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSuppliers.Location = new System.Drawing.Point(-14, -12);
+            this.btnSuppliers.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSuppliers.Name = "btnSuppliers";
+            this.btnSuppliers.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnSuppliers.Size = new System.Drawing.Size(244, 78);
+            this.btnSuppliers.TabIndex = 1;
+            this.btnSuppliers.Text = "Dobavljaci";
+            this.btnSuppliers.UseVisualStyleBackColor = false;
+            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,6 +546,7 @@
             this.panel13.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -528,11 +562,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnRecipes;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnReceipt;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnInvoice;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.FlowLayoutPanel dataPanel;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnData;
@@ -552,5 +586,7 @@
         private System.Windows.Forms.Button btnPatients;
         private System.Windows.Forms.FlowLayoutPanel catalogPanel;
         private System.Windows.Forms.Timer catalogTransition;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button btnSuppliers;
     }
 }

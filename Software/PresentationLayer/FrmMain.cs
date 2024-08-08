@@ -56,7 +56,7 @@ namespace PresentationLayer
 
         private void dataTransition_Tick(object sender, EventArgs e)
         {
-            ToggleTransition(ref dataPanel, ref dataPanelExpand, ref dataTransition, 150);
+            ToggleTransition(ref dataPanel, ref dataPanelExpand, ref dataTransition, 200);
         }
 
         private void btnDocuments_Click(object sender, EventArgs e)
@@ -125,6 +125,30 @@ namespace PresentationLayer
         {
             Text = GetTitleFromSender(sender);
             OpenForm(new Hospitals());
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Orders());
+        }
+
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Receipts());
+        }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Invoices());
+        }
+
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Suppliers());
         }
     }
 }
