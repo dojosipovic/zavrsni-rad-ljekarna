@@ -80,6 +80,12 @@
     <Compile Include="Invoices.Designer.cs">
       <DependentUpon>Invoices.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeasureUnitDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasureUnitDetails.Designer.cs">
+      <DependentUpon>MeasureUnitDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices.resx">
       <DependentUpon>Invoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasureUnitDetails.resx">
+      <DependentUpon>MeasureUnitDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>

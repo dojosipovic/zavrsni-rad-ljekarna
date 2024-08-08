@@ -13,9 +13,18 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        public JedinicaMjere GetJedinicaMjereByID(string id)
+        {
+            var query = from e in Entities where e.ID == id select e;
+            return query.FirstOrDefault();
+        }
+
         public override int Update(JedinicaMjere entity, bool saveChanges = true)
         {
-            throw new NotImplementedException();
+            var measureUnit = Entities.SingleOrDefault(m => m.ID == entity.ID);
+            measureUnit.Naziv = entity.Naziv;
+
+            return saveChanges ? SaveChanges() : 0;
         }
     }
 }

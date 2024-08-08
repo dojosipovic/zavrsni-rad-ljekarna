@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Exceptions
 {
-    public class LoginException : DrugstoreException
+    public class JedinicaMjereException : DrugstoreException
     {
-        public LoginException(string message) : base(message)
+        public JedinicaMjereException(string message) : base(message)
         {
         }
     }
