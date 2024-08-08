@@ -15,8 +15,7 @@ namespace BusinessLogicLayer
         {
             using(var repo = new FarmaceutRepository())
             {
-                var farmaceut = repo.GetAll().ToList().Find(x => x.Korime == korime);
-                return farmaceut;
+                return repo.GetAll().ToList().Find(x => x.Korime == korime);
             }
         }
     }

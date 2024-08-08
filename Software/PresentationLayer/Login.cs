@@ -24,6 +24,11 @@ namespace PresentationLayer
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ChangeForm();
+        }
+
+        private void ChangeForm()
+        {
             LoginUser();
             if (User != null) OpenMainForm();
         }
@@ -56,6 +61,16 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Krivo korisničko ime ili lozinka", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) ChangeForm();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) ChangeForm();
         }
     }
 }

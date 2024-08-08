@@ -49,6 +49,8 @@
             this.btnItems = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnMeasureUnits = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnSuppliers = new System.Windows.Forms.Button();
             this.catalogPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnCatalog = new System.Windows.Forms.Button();
@@ -63,8 +65,6 @@
             this.documentsTransition = new System.Windows.Forms.Timer(this.components);
             this.dataTransition = new System.Windows.Forms.Timer(this.components);
             this.catalogTransition = new System.Windows.Forms.Timer(this.components);
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.btnSuppliers = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.documentsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,13 +76,13 @@
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.catalogPanel.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -334,6 +334,32 @@
             this.btnMeasureUnits.UseVisualStyleBackColor = false;
             this.btnMeasureUnits.Click += new System.EventHandler(this.btnMeasureUnits_Click);
             // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btnSuppliers);
+            this.panel14.Location = new System.Drawing.Point(0, 150);
+            this.panel14.Margin = new System.Windows.Forms.Padding(0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(210, 50);
+            this.panel14.TabIndex = 6;
+            // 
+            // btnSuppliers
+            // 
+            this.btnSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnSuppliers.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("btnSuppliers.Image")));
+            this.btnSuppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSuppliers.Location = new System.Drawing.Point(-14, -12);
+            this.btnSuppliers.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSuppliers.Name = "btnSuppliers";
+            this.btnSuppliers.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnSuppliers.Size = new System.Drawing.Size(244, 78);
+            this.btnSuppliers.TabIndex = 1;
+            this.btnSuppliers.Text = "Dobavljaci";
+            this.btnSuppliers.UseVisualStyleBackColor = false;
+            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
+            // 
             // catalogPanel
             // 
             this.catalogPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
@@ -344,7 +370,7 @@
             this.catalogPanel.Location = new System.Drawing.Point(0, 100);
             this.catalogPanel.Margin = new System.Windows.Forms.Padding(0);
             this.catalogPanel.Name = "catalogPanel";
-            this.catalogPanel.Size = new System.Drawing.Size(210, 200);
+            this.catalogPanel.Size = new System.Drawing.Size(210, 50);
             this.catalogPanel.TabIndex = 9;
             // 
             // panel11
@@ -493,32 +519,6 @@
             this.catalogTransition.Interval = 10;
             this.catalogTransition.Tick += new System.EventHandler(this.catalogTransition_Tick);
             // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.btnSuppliers);
-            this.panel14.Location = new System.Drawing.Point(0, 150);
-            this.panel14.Margin = new System.Windows.Forms.Padding(0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(210, 50);
-            this.panel14.TabIndex = 6;
-            // 
-            // btnSuppliers
-            // 
-            this.btnSuppliers.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.btnSuppliers.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("btnSuppliers.Image")));
-            this.btnSuppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSuppliers.Location = new System.Drawing.Point(-14, -12);
-            this.btnSuppliers.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSuppliers.Name = "btnSuppliers";
-            this.btnSuppliers.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnSuppliers.Size = new System.Drawing.Size(244, 78);
-            this.btnSuppliers.TabIndex = 1;
-            this.btnSuppliers.Text = "Dobavljaci";
-            this.btnSuppliers.UseVisualStyleBackColor = false;
-            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,13 +540,13 @@
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.catalogPanel.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
