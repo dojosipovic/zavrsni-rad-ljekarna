@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,10 +62,33 @@ namespace PresentationLayer
                 {
                     success = false;
                     MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } catch (DbUpdateException ex)
+                {
+                    if (ex.InnerException?.InnerException is SqlException sqlEx)
+                    {
+                        string message = GetErrorMessage(sqlEx);
+                        MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else MessageBox.Show("Greška prilikom dodavanja", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    success = false;
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Neočekivana greška", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    success = false;
                 }
             }
 
             if (success) Close();
+        }
+
+        private string GetErrorMessage(SqlException sqlEx)
+        {
+            string message = sqlEx.Message;
+            if (message.Contains("UNIQUE_Dobavljac_OIB")) return "OIB već postoji!";
+            if (message.Contains("UNIQUE_Dobavljac_Naziv")) return"Naziv mora biti jedinstven";
+            if (message.Contains("UNIQUE_Dobavljac_IBAN")) return"IBAN mora biti jedinstven";
+            if (message.Contains("UNIQUE_Dobavljac_Email")) return "Email već postoji";
+            return "Greška prilikom dodavanja";
         }
     }
 }
