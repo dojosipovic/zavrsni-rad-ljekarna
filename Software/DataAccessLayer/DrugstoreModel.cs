@@ -34,12 +34,10 @@ namespace DataAccessLayer
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Artikl>()
-                .Property(e => e.Naziv)
-                .IsFixedLength();
+                .Property(e => e.Naziv);
 
             modelBuilder.Entity<Artikl>()
-                .Property(e => e.JedinicaMjereID)
-                .IsFixedLength();
+                .Property(e => e.JedinicaMjereID);
 
             modelBuilder.Entity<Artikl>()
                 .HasMany(e => e.StavkeNarudzbe)
@@ -62,24 +60,19 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Dobavljac>()
-                .Property(e => e.OIB)
-                .IsFixedLength();
+                .Property(e => e.OIB);
 
             modelBuilder.Entity<Dobavljac>()
-                .Property(e => e.Naziv)
-                .IsFixedLength();
+                .Property(e => e.Naziv);
 
             modelBuilder.Entity<Dobavljac>()
-                .Property(e => e.IBAN)
-                .IsFixedLength();
+                .Property(e => e.IBAN);
 
             modelBuilder.Entity<Dobavljac>()
-                .Property(e => e.Email)
-                .IsFixedLength();
+                .Property(e => e.Email);
 
             modelBuilder.Entity<Dobavljac>()
-                .Property(e => e.Adresa)
-                .IsFixedLength();
+                .Property(e => e.Adresa);
 
             modelBuilder.Entity<Dobavljac>()
                 .HasMany(e => e.Narudzba)
@@ -92,28 +85,22 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Farmaceut>()
-                .Property(e => e.Ime)
-                .IsFixedLength();
+                .Property(e => e.Ime);
 
             modelBuilder.Entity<Farmaceut>()
-                .Property(e => e.Prezime)
-                .IsFixedLength();
+                .Property(e => e.Prezime);
 
             modelBuilder.Entity<Farmaceut>()
-                .Property(e => e.Korime)
-                .IsFixedLength();
+                .Property(e => e.Korime);
 
             modelBuilder.Entity<Farmaceut>()
-                .Property(e => e.Lozinka)
-                .IsFixedLength();
+                .Property(e => e.Lozinka);
 
             modelBuilder.Entity<Farmaceut>()
-                .Property(e => e.Adresa)
-                .IsFixedLength();
+                .Property(e => e.Adresa);
 
             modelBuilder.Entity<Farmaceut>()
-                .Property(e => e.Email)
-                .IsFixedLength();
+                .Property(e => e.Email);
 
             modelBuilder.Entity<Farmaceut>()
                 .HasMany(e => e.Narudzba)
@@ -131,12 +118,10 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<JedinicaMjere>()
-                .Property(e => e.ID)
-                .IsFixedLength();
+                .Property(e => e.ID);
 
             modelBuilder.Entity<JedinicaMjere>()
-                .Property(e => e.Naziv)
-                .IsFixedLength();
+                .Property(e => e.Naziv);
 
             modelBuilder.Entity<JedinicaMjere>()
                 .HasMany(e => e.Artikl)
@@ -144,20 +129,16 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Lijecnik>()
-                .Property(e => e.Ime)
-                .IsFixedLength();
+                .Property(e => e.Ime);
 
             modelBuilder.Entity<Lijecnik>()
-                .Property(e => e.Prezime)
-                .IsFixedLength();
+                .Property(e => e.Prezime);
 
             modelBuilder.Entity<Lijecnik>()
-                .Property(e => e.Adresa)
-                .IsFixedLength();
+                .Property(e => e.Adresa);
 
             modelBuilder.Entity<Lijecnik>()
-                .Property(e => e.Telefon)
-                .IsFixedLength();
+                .Property(e => e.Telefon);
 
             modelBuilder.Entity<Lijecnik>()
                 .HasMany(e => e.Recept)
@@ -170,20 +151,16 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Pacijent>()
-                .Property(e => e.MBO)
-                .IsFixedLength();
+                .Property(e => e.MBO);
 
             modelBuilder.Entity<Pacijent>()
-                .Property(e => e.Ime)
-                .IsFixedLength();
+                .Property(e => e.Ime);
 
             modelBuilder.Entity<Pacijent>()
-                .Property(e => e.Prezime)
-                .IsFixedLength();
+                .Property(e => e.Prezime);
 
             modelBuilder.Entity<Pacijent>()
-                .Property(e => e.Adresa)
-                .IsFixedLength();
+                .Property(e => e.Adresa);
 
             modelBuilder.Entity<Pacijent>()
                 .HasMany(e => e.Recept)
@@ -206,8 +183,7 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<StatusNarudzbe>()
-                .Property(e => e.Naziv)
-                .IsFixedLength();
+                .Property(e => e.Naziv);
 
             modelBuilder.Entity<StatusNarudzbe>()
                 .HasMany(e => e.Narudzba)
@@ -216,12 +192,10 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Ustanova>()
-                .Property(e => e.Naziv)
-                .IsFixedLength();
+                .Property(e => e.Naziv);
 
             modelBuilder.Entity<Ustanova>()
-                .Property(e => e.Adresa)
-                .IsFixedLength();
+                .Property(e => e.Adresa);
 
             modelBuilder.Entity<Ustanova>()
                 .HasMany(e => e.Lijecnik)
@@ -229,20 +203,17 @@ namespace DataAccessLayer
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Podaci>()
-                .Property(e => e.Naziv)
-                .IsFixedLength();
+                .Property(e => e.Naziv);
 
             modelBuilder.Entity<Podaci>()
                 .Property(e => e.Adresa)
                 .IsFixedLength();
 
             modelBuilder.Entity<Podaci>()
-                .Property(e => e.OIB)
-                .IsFixedLength();
+                .Property(e => e.OIB);
 
             modelBuilder.Entity<Podaci>()
-                .Property(e => e.Telefon)
-                .IsFixedLength();
+                .Property(e => e.Telefon);
         }
     }
 }
