@@ -20,14 +20,14 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void Items_Load(object sender, EventArgs e)
+        private async void Items_Load(object sender, EventArgs e)
         {
-            RefreshGUI();
+            await RefreshGUI();
         }
 
-        private void RefreshGUI()
+        private async Task RefreshGUI()
         {
-            dgvItems.DataSource = artiklServices.GetAll();
+            dgvItems.DataSource = await artiklServices.GetAll();
 
             dgvItems.Columns["ID"].Visible = false;
             dgvItems.Columns["JedinicaMjereID"].Visible = false;

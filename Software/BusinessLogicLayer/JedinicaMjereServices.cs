@@ -10,11 +10,12 @@ namespace BusinessLogicLayer
 {
     public class JedinicaMjereServices
     {
-        public List<JedinicaMjere> GetAll()
+        public async Task<List<JedinicaMjere>> GetAll()
         {
             using(var repo = new JedinicaMjereRepository())
             {
-                return repo.GetAll().ToList();
+                return await Task.Run(() =>  repo.GetAll().ToList());
+                //return repo.GetAll().ToList();
             }
         }
     }

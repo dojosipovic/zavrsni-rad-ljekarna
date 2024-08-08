@@ -10,11 +10,12 @@ namespace BusinessLogicLayer
 {
     public class ArtiklServices
     {
-        public List<Artikl> GetAll()
+        public async Task<List<Artikl>> GetAll()
         {
             using(var repo = new ArtiklRepository())
             {
-                return repo.GetAll().ToList();
+                return await Task.Run(() =>  repo.GetAll().ToList());
+                //return repo.GetAll().ToList();
             }
         }
     }

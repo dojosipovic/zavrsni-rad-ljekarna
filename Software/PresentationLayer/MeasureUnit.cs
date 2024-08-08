@@ -19,14 +19,14 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void MeasureUnit_Load(object sender, EventArgs e)
+        private async void MeasureUnit_Load(object sender, EventArgs e)
         {
-            RefreshGUI();
+            await RefreshGUI();
         }
 
-        private void RefreshGUI()
+        private async Task RefreshGUI()
         {
-            dgvMeasureUnits.DataSource = JedinicaMjereServices.GetAll();
+            dgvMeasureUnits.DataSource = await JedinicaMjereServices.GetAll();
 
             dgvMeasureUnits.Columns["Artikl"].Visible = false;
         }
