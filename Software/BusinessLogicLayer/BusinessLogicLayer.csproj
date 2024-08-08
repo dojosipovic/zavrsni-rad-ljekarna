@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArtiklServices.cs" />
+    <Compile Include="DobavljacService.cs" />
+    <Compile Include="Exceptions\DobavljacException.cs" />
     <Compile Include="Exceptions\DrugstoreException.cs" />
     <Compile Include="Exceptions\JedinicaMjereException.cs" />
     <Compile Include="FarmaceusServices.cs" />

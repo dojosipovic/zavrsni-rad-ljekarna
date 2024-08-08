@@ -18,7 +18,7 @@ namespace EntitiesLayer.Entities
         public int ID { get; set; }
 
         [Required]
-        [StringLength(9)]
+        [StringLength(11)]
         public string OIB { get; set; }
 
         [Required]

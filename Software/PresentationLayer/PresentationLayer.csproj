@@ -130,6 +130,12 @@
     <Compile Include="Recipes.Designer.cs">
       <DependentUpon>Recipes.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupplierDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierDetails.Designer.cs">
+      <DependentUpon>SupplierDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recipes.resx">
       <DependentUpon>Recipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierDetails.resx">
+      <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Suppliers.resx">
       <DependentUpon>Suppliers.cs</DependentUpon>
