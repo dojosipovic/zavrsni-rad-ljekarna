@@ -44,5 +44,12 @@ namespace PresentationLayer
             var order = dgvOrders.CurrentRow.DataBoundItem as Narudzba;
             btnEdit.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
         }
+
+        private async void btnAdd_Click(object sender, EventArgs e)
+        {
+            OrderDetails orderDetails = new OrderDetails();
+            orderDetails.ShowDialog();
+            await RefreshGUI();
+        }
     }
 }

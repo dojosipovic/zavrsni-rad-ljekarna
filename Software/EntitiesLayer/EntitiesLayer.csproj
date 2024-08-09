@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Artikl.cs" />
+    <Compile Include="Entities\Artikl.Ext.cs" />
     <Compile Include="Entities\Dobavljac.cs" />
     <Compile Include="Entities\Dobavljac.Ext.cs" />
     <Compile Include="Entities\Farmaceut.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Entities\StatusNarudzbe.cs" />
     <Compile Include="Entities\StatusNarudzbe.Ext.cs" />
     <Compile Include="Entities\StavkeNarudzbe.cs" />
+    <Compile Include="Entities\StavkeNarudzbe.Ext.cs" />
     <Compile Include="Entities\StavkePrimke.cs" />
     <Compile Include="Entities\StavkeRacuna.cs" />
     <Compile Include="Entities\StavkeRecepta.cs" />
