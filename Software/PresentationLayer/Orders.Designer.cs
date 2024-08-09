@@ -28,39 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvOrders = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvOrders
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(210, 108);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(590, 342);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.Location = new System.Drawing.Point(210, 108);
+            this.dgvOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.Size = new System.Drawing.Size(590, 342);
+            this.dgvOrders.TabIndex = 0;
             // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOrders);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Orders";
             this.Padding = new System.Windows.Forms.Padding(210, 0, 0, 0);
             this.Text = "Orders";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Orders_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOrders;
     }
 }

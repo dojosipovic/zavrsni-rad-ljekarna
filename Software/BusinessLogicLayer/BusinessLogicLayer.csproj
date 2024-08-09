@@ -49,6 +49,7 @@
     <Compile Include="Exceptions\JedinicaMjereException.cs" />
     <Compile Include="FarmaceusServices.cs" />
     <Compile Include="JedinicaMjereServices.cs" />
+    <Compile Include="NarudzbaServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

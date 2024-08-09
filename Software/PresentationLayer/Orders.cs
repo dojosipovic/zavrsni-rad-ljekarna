@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace PresentationLayer
 {
     public partial class Orders : Form
     {
+        private NarudzbaServices narudzbaServices = new NarudzbaServices();
         public Orders()
         {
             InitializeComponent();
+        }
+
+        private async void Orders_Load(object sender, EventArgs e)
+        {
+            await RefreshGUI();
+        }
+
+        private async Task RefreshGUI()
+        {
+            dgvOrders.DataSource = await narudzbaServices.GetAll();
         }
     }
 }
