@@ -65,27 +65,28 @@ namespace PresentationLayer
                 try
                 {
                     await dobavljacService.Remove(supplier);
-                    await RefreshGUI();
                 } catch (DbUpdateException ex)
                 {
                     if (ex.InnerException?.InnerException is SqlException sqlEx)
                     {
                         string message = GetErrorMessage(sqlEx);
                         MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    } else MessageBox.Show("Greška prilikom brisanja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    } else MessageBox.Show(GetErrorMessage(ex), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } catch (Exception ex)
                 {
                     MessageBox.Show("Neočekivana greška!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                await RefreshGUI();
             }
         }
 
-        private string GetErrorMessage(SqlException sqlEx)
+        private string GetErrorMessage(Exception ex)
         {
-            string message = sqlEx.Message;
+            string message = ex.Message;
             if (message.Contains("FK_Narudzba_Dobavljac")) return "Dobavljač ima upisane narudžbe!";
             if (message.Contains("FK_Primka_Dobavljac")) return "Dobavljač ima upisane primke!";
-            return "Greška prilikom brisanja!";
+            if (message.Contains("unexpected number of rows (0)")) return "Ovaj dobavljač ne postoji!";
+            return message;
         }
     }
 }

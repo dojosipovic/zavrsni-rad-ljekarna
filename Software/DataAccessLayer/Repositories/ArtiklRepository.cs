@@ -21,7 +21,13 @@ namespace DataAccessLayer.Repositories
 
         public override int Update(Artikl entity, bool saveChanges = true)
         {
-            throw new NotImplementedException();
+            var item = Entities.SingleOrDefault(e => e.ID == entity.ID);
+            item.Naziv = entity.Naziv;
+            item.Kolicina = entity.Kolicina;
+            item.Cijena = entity.Cijena;
+            item.JedinicaMjereID = entity.JedinicaMjereID;
+
+            return saveChanges ? SaveChanges() : 0;
         }
     }
 }
