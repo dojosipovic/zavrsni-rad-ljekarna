@@ -31,6 +31,13 @@ namespace EntitiesLayer.Entities
 
         public virtual StatusNarudzbe StatusNarudzbe { get; set; }
 
+        [NotMapped]
+        public StatusNarudzbeEnum Status
+        {
+            get { return (StatusNarudzbeEnum)StatusID; }
+            set { StatusID = (int)value; }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Primka> Primka { get; set; }
 

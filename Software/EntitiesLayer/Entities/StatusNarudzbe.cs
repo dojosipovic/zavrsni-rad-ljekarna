@@ -5,6 +5,12 @@ namespace EntitiesLayer.Entities
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
+    public enum StatusNarudzbeEnum
+    {
+        Uizradi = 3,
+        Zakljucena = 4
+    }
+
     [Table("StatusNarudzbe")]
     public partial class StatusNarudzbe
     {
