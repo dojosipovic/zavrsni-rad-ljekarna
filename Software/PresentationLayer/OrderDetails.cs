@@ -1,9 +1,12 @@
 ﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Exceptions;
 using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -97,7 +100,6 @@ namespace PresentationLayer
         private async void btnSave_Click(object sender, EventArgs e)
         {
             string dateTimeString = txtDate.Text.Replace(',', '.');
-            MessageBox.Show(dateTimeString);
             string format = "dd.MM.yyyy HH:mm";
             DateTime orderDate;
             bool success = DateTime.TryParseExact(dateTimeString, format, null, DateTimeStyles.None, out orderDate);
@@ -120,7 +122,34 @@ namespace PresentationLayer
 
         private async Task SaveOrder(Narudzba order)
         {
-            await narudzbaServices.Add(order);
+            try
+            {
+                await narudzbaServices.Add(order);
+                Close();
+            } catch (NarudzbaException ex)
+            {
+                MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (DbUpdateException ex)
+            {
+                if (ex.InnerException?.InnerException is SqlException sqlEx)
+                {
+                    string message = GetErrorMessage(sqlEx);
+                    MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else MessageBox.Show(GetErrorMessage(ex), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Neočekivana greška", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private string GetErrorMessage(Exception sqlEx)
+        {
+            string message = sqlEx.Message;
+            if (message.Contains("FK_Narudzba_StatusNarudzbe")) return "Ovaj status ne postoji!";
+            if (message.Contains("FK_Narudzba_Dobavljac")) return "Dobavljač ne postoji!";
+            if (message.Contains("FK_StavkeNarudzbe_Artikl")) return "Jedan od artikala ne postoji!";
+            if (message.Contains("FK_Narudzba_Farmaceut")) return "Greška prilikom kreiranja, molimo prijavite se ponovno!";
+            return message;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DataAccessLayer;
+﻿using BusinessLogicLayer.Exceptions;
+using DataAccessLayer;
 using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,9 @@ namespace BusinessLogicLayer
 
         public async Task<bool> Add(Narudzba narudzba)
         {
+            if (narudzba.StavkeNarudzbe.Count == 0)
+                throw new NarudzbaException("Morate imati najmanje jednu stavku u narodžbi!");
+
             using(var repo = new NarudzbaRepository())
             {
                 int affectedRows = await Task.Run(() => repo.Add(narudzba));

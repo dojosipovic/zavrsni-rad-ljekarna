@@ -38,6 +38,7 @@ namespace PresentationLayer
             FrmMain frmMain = new FrmMain();
             Hide();
             frmMain.ShowDialog();
+            User = null;
             txtPassword.Text = "";
             txtUsername.Text = "";
             Show();

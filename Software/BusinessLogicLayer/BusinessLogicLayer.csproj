@@ -47,6 +47,7 @@
     <Compile Include="Exceptions\DobavljacException.cs" />
     <Compile Include="Exceptions\DrugstoreException.cs" />
     <Compile Include="Exceptions\JedinicaMjereException.cs" />
+    <Compile Include="Exceptions\NarudzbaException.cs" />
     <Compile Include="FarmaceusServices.cs" />
     <Compile Include="JedinicaMjereServices.cs" />
     <Compile Include="NarudzbaServices.cs" />
