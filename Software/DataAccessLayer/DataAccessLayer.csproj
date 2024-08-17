@@ -116,6 +116,7 @@
     <Compile Include="Repositories\FarmaceutRepository.cs" />
     <Compile Include="Repositories\JedinicaMjereRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\StatusRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

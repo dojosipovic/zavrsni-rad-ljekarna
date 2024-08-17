@@ -37,6 +37,7 @@
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             // txtDate
             // 
             this.txtDate.Location = new System.Drawing.Point(85, 25);
-            this.txtDate.Mask = "0000.00.00 90:00";
+            this.txtDate.Mask = "00.00.0000 90:00";
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(100, 20);
             this.txtDate.TabIndex = 2;
@@ -84,6 +85,7 @@
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Izbrisi";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cmbItems
             // 
@@ -109,6 +111,7 @@
             this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Odustani";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -118,12 +121,23 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(418, 25);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(104, 21);
+            this.cmbStatus.TabIndex = 11;
             // 
             // OrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtAmount);
@@ -152,5 +166,6 @@
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ComboBox cmbStatus;
     }
 }

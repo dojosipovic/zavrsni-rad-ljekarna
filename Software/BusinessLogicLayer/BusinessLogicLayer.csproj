@@ -51,6 +51,7 @@
     <Compile Include="JedinicaMjereServices.cs" />
     <Compile Include="NarudzbaServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
