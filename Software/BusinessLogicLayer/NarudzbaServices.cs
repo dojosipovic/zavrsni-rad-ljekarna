@@ -30,5 +30,13 @@ namespace BusinessLogicLayer
                 return affectedRows > 0;
             }
         }
+
+        public async Task<List<StavkeNarudzbe>> GetOrderItems(Narudzba narudzba)
+        {
+            using(var repo = new NarudzbaRepository())
+            {
+                return await Task.Run(() => repo.GetOrderItems(narudzba.ID).ToList());
+            }
+        }
     }
 }

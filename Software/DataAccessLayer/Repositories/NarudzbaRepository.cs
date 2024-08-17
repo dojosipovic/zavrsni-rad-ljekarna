@@ -17,7 +17,7 @@ namespace DataAccessLayer
 
         public override IQueryable<Narudzba> GetAll()
         {
-            return base.GetAll().Include("Dobavljac").Include("Farmaceut").Include("StatusNarudzbe");
+            return base.GetAll().Include("Dobavljac").Include("Farmaceut").Include("StatusNarudzbe").Include("StavkeNarudzbe");
         }
 
         public override int Add(Narudzba entity, bool saveChanges = true)
@@ -33,6 +33,19 @@ namespace DataAccessLayer
                 model.Narudzba.Add(entity);
 
                 return saveChanges ? model.SaveChanges() : 0;
+            }
+        }
+
+        public ICollection<StavkeNarudzbe> GetOrderItems(int orderId)
+        {
+            using (var model = new DrugstoreModel())
+            {
+                var order = model.Narudzba.Include(n => n.StavkeNarudzbe).First(o => o.ID == orderId);
+                foreach(var item in order.StavkeNarudzbe)
+                {
+                    model.Entry(item).Reference(i => i.Artikl).Load();
+                }
+                return order.StavkeNarudzbe;
             }
         }
 

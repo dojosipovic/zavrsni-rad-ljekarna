@@ -27,14 +27,7 @@ namespace PresentationLayer
         public OrderDetails(Narudzba order = null)
         {
             InitializeComponent();
-            if (order != null) _order = order;
-            else
-            {
-                _order = new Narudzba();
-                _order.StavkeNarudzbe = new List<StavkeNarudzbe>();
-                _order.Status = StatusNarudzbeEnum.Uizradi;
-                _order.Datum = DateTime.Now;
-            }
+            _order = order;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -76,8 +69,48 @@ namespace PresentationLayer
             cmbSupplier.DataSource = await dobavljacService.GetAll();
             cmbStatus.DataSource = await statusServices.GetAll();
 
-            DateTime currentDate = DateTime.Now;
-            txtDate.Text = currentDate.ToString("dd.MM.yyyy HH:mm");
+            if (_order == null)
+            {
+                _order = new Narudzba();
+                _order.StavkeNarudzbe = new List<StavkeNarudzbe>();
+                _order.Datum = DateTime.Now;
+                DateTime currentDate = DateTime.Now;
+                txtDate.Text = currentDate.ToString("dd.MM.yyyy HH:mm");
+            } else
+            {
+                SelectSupplier();
+                SelectStatus();
+                txtDate.Text = _order.Datum.ToString("dd.MM.yyyy HH:mm");
+                _order.StavkeNarudzbe = await narudzbaServices.GetOrderItems(_order);
+            }
+
+            RefreshGUI();
+        }
+
+        private void SelectStatus()
+        {
+            for (int i = 0; i < cmbStatus.Items.Count; i++)
+            {
+                var status = cmbStatus.Items[i] as StatusNarudzbe;
+                if (status.ID == _order.StatusID)
+                {
+                    cmbStatus.SelectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        private void SelectSupplier()
+        {
+            for (int i = 0; i < cmbSupplier.Items.Count; i++)
+            {
+                var supplier = cmbSupplier.Items[i] as Dobavljac;
+                if (supplier.ID == _order.DobavljacID)
+                {
+                    cmbSupplier.SelectedIndex = i;
+                    break;
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

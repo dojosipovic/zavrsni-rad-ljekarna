@@ -42,7 +42,7 @@ namespace PresentationLayer
         private void dgvOrders_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var order = dgvOrders.CurrentRow.DataBoundItem as Narudzba;
-            btnEdit.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
+            //btnEdit.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
@@ -50,6 +50,17 @@ namespace PresentationLayer
             OrderDetails orderDetails = new OrderDetails();
             orderDetails.ShowDialog();
             await RefreshGUI();
+        }
+
+        private async void btnEdit_Click(object sender, EventArgs e)
+        {
+            var order = dgvOrders.CurrentRow?.DataBoundItem as Narudzba;
+            if (order != null)
+            {
+                OrderDetails orderDetails = new OrderDetails(order);
+                orderDetails.ShowDialog();
+                await RefreshGUI();
+            }
         }
     }
 }
