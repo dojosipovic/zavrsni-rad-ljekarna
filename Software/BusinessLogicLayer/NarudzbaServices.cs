@@ -22,7 +22,7 @@ namespace BusinessLogicLayer
         public async Task<bool> Add(Narudzba narudzba)
         {
             if (narudzba.StavkeNarudzbe.Count == 0)
-                throw new NarudzbaException("Morate imati najmanje jednu stavku u narodžbi!");
+                throw new NarudzbaException("Morate imati najmanje jednu stavku u narudžbi!");
 
             using(var repo = new NarudzbaRepository())
             {
@@ -36,6 +36,18 @@ namespace BusinessLogicLayer
             using(var repo = new NarudzbaRepository())
             {
                 return await Task.Run(() => repo.GetOrderItems(narudzba.ID).ToList());
+            }
+        }
+
+        public async Task<bool> Update(Narudzba order)
+        {
+            if (order.StavkeNarudzbe.Count == 0)
+                throw new NarudzbaException("Morate imati najmanje jednu stavku u narudžbi!");
+
+            using (var repo = new NarudzbaRepository())
+            {
+                int affectedRows = await Task.Run(() => repo.Update(order));
+                return affectedRows > 0;
             }
         }
     }

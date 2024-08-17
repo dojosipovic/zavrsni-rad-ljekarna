@@ -23,11 +23,13 @@ namespace PresentationLayer
         private StatusServices statusServices = new StatusServices();
         private NarudzbaServices narudzbaServices = new NarudzbaServices();
         private Narudzba _order = null;
+        private bool newOrder = true;
 
         public OrderDetails(Narudzba order = null)
         {
             InitializeComponent();
             _order = order;
+            if (_order != null) newOrder = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -145,10 +147,10 @@ namespace PresentationLayer
 
             var supplier = cmbSupplier.SelectedItem as Dobavljac;
             var status = cmbStatus.SelectedItem as StatusNarudzbe;
-            _order.Dobavljac = supplier;
+            _order.DobavljacID = supplier.ID;
             _order.Datum = orderDate;
             _order.FarmaceutID = Login.User.ID;
-            _order.StatusNarudzbe = status;
+            _order.StatusID = status.ID;
 
             await SaveOrder(_order);
         }
@@ -157,7 +159,8 @@ namespace PresentationLayer
         {
             try
             {
-                await narudzbaServices.Add(order);
+                if (newOrder) await narudzbaServices.Add(order);
+                else await narudzbaServices.Update(order);
                 Close();
             } catch (NarudzbaException ex)
             {

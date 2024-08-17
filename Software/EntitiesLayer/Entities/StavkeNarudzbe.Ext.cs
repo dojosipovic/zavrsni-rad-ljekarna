@@ -13,14 +13,14 @@ namespace EntitiesLayer.Entities
         {
             if (obj is StavkeNarudzbe other)
             {
-                return NarudzbaID == other.NarudzbaID && ArtiklID == other.ArtiklID;
+                return ArtiklID == other.ArtiklID;
             }
             return false;
         }
 
         public override int GetHashCode()
         {
-            return ArtiklID.GetHashCode() ^ NarudzbaID.GetHashCode();
+            return ArtiklID.GetHashCode();
         }
     }
 }
