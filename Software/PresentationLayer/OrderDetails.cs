@@ -86,6 +86,19 @@ namespace PresentationLayer
                 _order.StavkeNarudzbe = await narudzbaServices.GetOrderItems(_order);
             }
 
+            if (_order.Status == StatusNarudzbeEnum.Zakljucena)
+            {
+                txtDate.Enabled = false;
+                cmbSupplier.Enabled = false;
+                cmbStatus.Enabled = false;
+                cmbItems.Enabled = false;
+                txtAmount.Enabled = false;
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+                btnSave.Enabled = false;
+                dgvOrderItems.Enabled = false;
+            }
+
             RefreshGUI();
         }
 
