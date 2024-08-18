@@ -54,6 +54,7 @@
     <Compile Include="Entities\Lijecnik.Ext.cs" />
     <Compile Include="Entities\Narudzba.cs" />
     <Compile Include="Entities\Pacijent.cs" />
+    <Compile Include="Entities\Pacijent.Ext.cs" />
     <Compile Include="Entities\Podaci.cs" />
     <Compile Include="Entities\Primka.cs" />
     <Compile Include="Entities\Racun.cs" />

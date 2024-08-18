@@ -64,12 +64,6 @@ namespace PresentationLayer
             documentsTransition.Start();
         }
 
-        private void btnRecipes_Click(object sender, EventArgs e)
-        {
-            Text = GetTitleFromSender(sender);
-            OpenForm(new Recipes());
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Close();
@@ -149,6 +143,12 @@ namespace PresentationLayer
         {
             Text = GetTitleFromSender(sender);
             OpenForm(new Suppliers());
+        }
+
+        private void btnPrescriptions_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Prescriptions());
         }
     }
 }

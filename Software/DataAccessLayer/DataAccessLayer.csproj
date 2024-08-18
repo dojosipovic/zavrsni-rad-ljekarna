@@ -119,6 +119,7 @@
     <Compile Include="Repositories\ReceptRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />
+    <Compile Include="Repositories\UstanovaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

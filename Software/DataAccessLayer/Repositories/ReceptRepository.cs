@@ -15,6 +15,11 @@ namespace DataAccessLayer.Repositories
         {
         }
 
+        public override IQueryable<Recept> GetAll()
+        {
+            return base.GetAll().Include("Lijecnik").Include("Pacijent");
+        }
+
         public IQueryable<Recept> GetPatientPrescrioptions(int patientId)
         {
             var query = from e in Entities where e.PacijentID == patientId select e;

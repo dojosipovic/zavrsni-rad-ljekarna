@@ -34,8 +34,6 @@
             this.documentsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDocuments = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnRecipes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnReceipt = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -60,6 +58,8 @@
             this.btnPatients = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnHospital = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnPrescriptions = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.documentsTransition = new System.Windows.Forms.Timer(this.components);
@@ -68,7 +68,6 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.documentsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -82,6 +81,7 @@
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,32 +137,6 @@
             this.btnDocuments.Text = "Dokumenti";
             this.btnDocuments.UseVisualStyleBackColor = false;
             this.btnDocuments.Click += new System.EventHandler(this.btnDocuments_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnRecipes);
-            this.panel3.Location = new System.Drawing.Point(0, 200);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(210, 50);
-            this.panel3.TabIndex = 4;
-            // 
-            // btnRecipes
-            // 
-            this.btnRecipes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRecipes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.btnRecipes.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecipes.Image = ((System.Drawing.Image)(resources.GetObject("btnRecipes.Image")));
-            this.btnRecipes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecipes.Location = new System.Drawing.Point(-14, -12);
-            this.btnRecipes.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRecipes.Name = "btnRecipes";
-            this.btnRecipes.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnRecipes.Size = new System.Drawing.Size(244, 78);
-            this.btnRecipes.TabIndex = 1;
-            this.btnRecipes.Text = "Recepti";
-            this.btnRecipes.UseVisualStyleBackColor = false;
-            this.btnRecipes.Click += new System.EventHandler(this.btnRecipes_Click);
             // 
             // panel4
             // 
@@ -477,6 +451,32 @@
             this.btnHospital.UseVisualStyleBackColor = false;
             this.btnHospital.Click += new System.EventHandler(this.btnHospital_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnPrescriptions);
+            this.panel3.Location = new System.Drawing.Point(0, 200);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(210, 50);
+            this.panel3.TabIndex = 4;
+            // 
+            // btnPrescriptions
+            // 
+            this.btnPrescriptions.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrescriptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnPrescriptions.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrescriptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrescriptions.Image")));
+            this.btnPrescriptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrescriptions.Location = new System.Drawing.Point(-14, -12);
+            this.btnPrescriptions.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPrescriptions.Name = "btnPrescriptions";
+            this.btnPrescriptions.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnPrescriptions.Size = new System.Drawing.Size(244, 78);
+            this.btnPrescriptions.TabIndex = 1;
+            this.btnPrescriptions.Text = "Recepti";
+            this.btnPrescriptions.UseVisualStyleBackColor = false;
+            this.btnPrescriptions.Click += new System.EventHandler(this.btnPrescriptions_Click);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -532,7 +532,6 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.documentsPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -546,6 +545,7 @@
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -560,7 +560,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnRecipes;
+        private System.Windows.Forms.Button btnPrescriptions;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnReceipt;
         private System.Windows.Forms.Panel panel5;
