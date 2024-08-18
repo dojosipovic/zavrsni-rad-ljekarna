@@ -45,7 +45,7 @@ namespace PresentationLayer
         private void dgvOrders_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var order = dgvOrders.CurrentRow.DataBoundItem as Narudzba;
-            //btnDelete.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
+            btnDelete.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace PresentationLayer
         private void dgvOrders_SelectionChanged(object sender, EventArgs e)
         {
             var order = dgvOrders.CurrentRow.DataBoundItem as Narudzba;
-            //btnDelete.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
+            btnDelete.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
