@@ -15,11 +15,25 @@ namespace DataAccessLayer.Repositories
         {
         }
 
-        public IQueryable<Recept> GetPatientPrescrioptions(Pacijent pacijent)
+        public IQueryable<Recept> GetPatientPrescrioptions(int patientId)
         {
-            var query = from e in Entities where e.PacijentID == pacijent.ID select e;
+            var query = from e in Entities where e.PacijentID == patientId select e;
             return query.Include("Lijecnik");
         }
+
+        public ICollection<StavkeRecepta> GetPrescrioptionItems(int prescriptionId)
+        {
+            using (var model = new DrugstoreModel())
+            {
+                var prescription = model.Recept.Include(n => n.StavkeRecepta).First(p => p.ID == prescriptionId);
+                foreach (var item in prescription.StavkeRecepta)
+                {
+                    model.Entry(item).Reference(i => i.Artikl).Load();
+                }
+                return prescription.StavkeRecepta;
+            }
+        }
+
         public override int Update(Recept entity, bool saveChanges = true)
         {
             throw new NotImplementedException();

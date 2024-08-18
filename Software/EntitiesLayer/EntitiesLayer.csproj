@@ -51,6 +51,7 @@
     <Compile Include="Entities\JedinicaMjere.cs" />
     <Compile Include="Entities\JedinicaMjere.Ext.cs" />
     <Compile Include="Entities\Lijecnik.cs" />
+    <Compile Include="Entities\Lijecnik.Ext.cs" />
     <Compile Include="Entities\Narudzba.cs" />
     <Compile Include="Entities\Pacijent.cs" />
     <Compile Include="Entities\Podaci.cs" />
