@@ -50,6 +50,7 @@
     <Compile Include="Exceptions\NarudzbaException.cs" />
     <Compile Include="FarmaceusServices.cs" />
     <Compile Include="JedinicaMjereServices.cs" />
+    <Compile Include="LijecnikServices.cs" />
     <Compile Include="NarudzbaServices.cs" />
     <Compile Include="PacijentServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

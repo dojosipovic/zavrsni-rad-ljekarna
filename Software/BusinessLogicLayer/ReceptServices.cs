@@ -26,6 +26,14 @@ namespace BusinessLogicLayer
             }
         }
 
+        public async Task<List<Recept>> GetDoctorPrescrioptions(Lijecnik lijecnik)
+        {
+            using (var repo = new ReceptRepository())
+            {
+                return await Task.Run(() => repo.GetDoctorPrescrioptions(lijecnik.ID).ToList());
+            }
+        }
+
         public async Task<List<StavkeRecepta>> GetPrescrioptionItems(Recept recept)
         {
             using(var repo = new ReceptRepository())

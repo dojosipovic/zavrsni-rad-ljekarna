@@ -26,6 +26,12 @@ namespace DataAccessLayer.Repositories
             return query.Include("Lijecnik");
         }
 
+        public IQueryable<Recept> GetDoctorPrescrioptions(int doctorId)
+        {
+            var query = from e in Entities where e.LijecnikID == doctorId select e;
+            return query.Include("Pacijent");
+        }
+
         public ICollection<StavkeRecepta> GetPrescrioptionItems(int prescriptionId)
         {
             using (var model = new DrugstoreModel())

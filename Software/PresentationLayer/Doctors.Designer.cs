@@ -30,7 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDoctors = new System.Windows.Forms.DataGridView();
+            this.dgvPrescriptions = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtTelephone = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptions)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,14 +60,104 @@
             this.dgvDoctors.Location = new System.Drawing.Point(210, 146);
             this.dgvDoctors.Margin = new System.Windows.Forms.Padding(0);
             this.dgvDoctors.Name = "dgvDoctors";
-            this.dgvDoctors.Size = new System.Drawing.Size(402, 304);
+            this.dgvDoctors.Size = new System.Drawing.Size(494, 379);
             this.dgvDoctors.TabIndex = 1;
+            this.dgvDoctors.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoctors_CellClick);
+            // 
+            // dgvPrescriptions
+            // 
+            this.dgvPrescriptions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPrescriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrescriptions.Location = new System.Drawing.Point(707, 146);
+            this.dgvPrescriptions.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.dgvPrescriptions.Name = "dgvPrescriptions";
+            this.dgvPrescriptions.Size = new System.Drawing.Size(441, 379);
+            this.dgvPrescriptions.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(774, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Ime";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(754, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Prezime";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(758, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Adresa";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(937, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Telefon";
+            // 
+            // txtName
+            // 
+            this.txtName.Enabled = false;
+            this.txtName.Location = new System.Drawing.Point(804, 63);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(127, 20);
+            this.txtName.TabIndex = 7;
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Enabled = false;
+            this.txtSurname.Location = new System.Drawing.Point(804, 95);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(128, 20);
+            this.txtSurname.TabIndex = 8;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Enabled = false;
+            this.txtAddress.Location = new System.Drawing.Point(804, 121);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(329, 20);
+            this.txtAddress.TabIndex = 9;
+            // 
+            // txtTelephone
+            // 
+            this.txtTelephone.Enabled = false;
+            this.txtTelephone.Location = new System.Drawing.Point(986, 64);
+            this.txtTelephone.Name = "txtTelephone";
+            this.txtTelephone.Size = new System.Drawing.Size(132, 20);
+            this.txtTelephone.TabIndex = 10;
             // 
             // Doctors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1148, 525);
+            this.Controls.Add(this.txtTelephone);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvPrescriptions);
             this.Controls.Add(this.dgvDoctors);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -66,6 +166,7 @@
             this.Text = "Doctors";
             this.Load += new System.EventHandler(this.Doctors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,5 +176,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvDoctors;
+        private System.Windows.Forms.DataGridView dgvPrescriptions;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtTelephone;
     }
 }
