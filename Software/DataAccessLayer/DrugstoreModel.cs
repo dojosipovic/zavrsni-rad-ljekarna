@@ -148,7 +148,7 @@ namespace DataAccessLayer
             modelBuilder.Entity<Narudzba>()
                 .HasMany(e => e.StavkeNarudzbe)
                 .WithRequired(e => e.Narudzba)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Pacijent>()
                 .Property(e => e.MBO);

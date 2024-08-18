@@ -22,7 +22,7 @@ namespace DataAccessLayer
 
         public override int Add(Narudzba entity, bool saveChanges = true)
         {
-            using(var model = new DrugstoreModel())
+            using (var model = new DrugstoreModel())
             {
                 foreach (var item in entity.StavkeNarudzbe)
                 {
@@ -39,7 +39,7 @@ namespace DataAccessLayer
             using (var model = new DrugstoreModel())
             {
                 var order = model.Narudzba.Include(n => n.StavkeNarudzbe).First(o => o.ID == orderId);
-                foreach(var item in order.StavkeNarudzbe)
+                foreach (var item in order.StavkeNarudzbe)
                 {
                     model.Entry(item).Reference(i => i.Artikl).Load();
                 }
@@ -84,5 +84,12 @@ namespace DataAccessLayer
             }
         }
 
+        public override int Remove(Narudzba entity, bool saveChanges = true)
+        {
+            var order = Entities.Include(o => o.StavkeNarudzbe).FirstOrDefault(o => o.ID == entity.ID);
+            Entities.Remove(order);
+
+            return saveChanges ? SaveChanges() : 0;
+        }
     }
 }

@@ -1,9 +1,12 @@
 ﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Exceptions;
 using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -42,7 +45,7 @@ namespace PresentationLayer
         private void dgvOrders_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var order = dgvOrders.CurrentRow.DataBoundItem as Narudzba;
-            //btnEdit.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
+            //btnDelete.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
@@ -61,6 +64,43 @@ namespace PresentationLayer
                 orderDetails.ShowDialog();
                 await RefreshGUI();
             }
+        }
+
+        private void dgvOrders_SelectionChanged(object sender, EventArgs e)
+        {
+            var order = dgvOrders.CurrentRow.DataBoundItem as Narudzba;
+            //btnDelete.Enabled = order.Status == StatusNarudzbeEnum.Uizradi;
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            var order = dgvOrders.CurrentRow.DataBoundItem as Narudzba;
+            try
+            {
+                await narudzbaServices.Remove(order);
+            } catch (NarudzbaException ex)
+            {
+                MessageBox.Show(ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (DbUpdateException ex)
+            {
+                if (ex.InnerException?.InnerException is SqlException sqlEx)
+                {
+                    string message = GetErrorMessage(sqlEx);
+                    MessageBox.Show(message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else MessageBox.Show(GetErrorMessage(ex), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(GetErrorMessage(ex), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            await RefreshGUI();
+        }
+
+        private string GetErrorMessage(Exception ex)
+        {
+            string message = ex.Message;
+            if (message.Contains("FK_Primka_Narudzba")) return "Narudžba je povezana s primkom!";
+            if (message.Contains("Value cannot be null.")) return "Narudžba ne postoji!";
+            return message;
         }
     }
 }

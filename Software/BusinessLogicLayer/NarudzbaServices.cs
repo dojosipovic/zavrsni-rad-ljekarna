@@ -50,5 +50,17 @@ namespace BusinessLogicLayer
                 return affectedRows > 0;
             }
         }
+
+        public async Task<bool> Remove(Narudzba order)
+        {
+            if (order.Status == StatusNarudzbeEnum.Zakljucena)
+                throw new NarudzbaException("Ne možete obrisati zaključenu narudžbu!");
+
+            using(var repo = new NarudzbaRepository())
+            {
+                int affectedRows = await Task.Run(() => repo.Remove(order));
+                return affectedRows > 0;
+            }
+        }
     }
 }
