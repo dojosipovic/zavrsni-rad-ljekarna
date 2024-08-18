@@ -103,7 +103,6 @@
             // 
             this.documentsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(231)))), ((int)(((byte)(252)))));
             this.documentsPanel.Controls.Add(this.panel1);
-            this.documentsPanel.Controls.Add(this.panel3);
             this.documentsPanel.Controls.Add(this.panel4);
             this.documentsPanel.Controls.Add(this.panel5);
             this.documentsPanel.Controls.Add(this.panel6);
@@ -142,7 +141,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnRecipes);
-            this.panel3.Location = new System.Drawing.Point(0, 50);
+            this.panel3.Location = new System.Drawing.Point(0, 200);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(210, 50);
@@ -168,7 +167,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnReceipt);
-            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Location = new System.Drawing.Point(0, 50);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(210, 50);
@@ -194,7 +193,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnInvoice);
-            this.panel5.Location = new System.Drawing.Point(0, 150);
+            this.panel5.Location = new System.Drawing.Point(0, 100);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(210, 50);
@@ -220,7 +219,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.btnOrders);
-            this.panel6.Location = new System.Drawing.Point(0, 200);
+            this.panel6.Location = new System.Drawing.Point(0, 150);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(210, 50);
@@ -367,6 +366,7 @@
             this.catalogPanel.Controls.Add(this.panel12);
             this.catalogPanel.Controls.Add(this.panel13);
             this.catalogPanel.Controls.Add(this.panel10);
+            this.catalogPanel.Controls.Add(this.panel3);
             this.catalogPanel.Location = new System.Drawing.Point(0, 100);
             this.catalogPanel.Margin = new System.Windows.Forms.Padding(0);
             this.catalogPanel.Name = "catalogPanel";

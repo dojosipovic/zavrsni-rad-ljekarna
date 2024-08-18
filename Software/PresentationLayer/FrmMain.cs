@@ -23,7 +23,7 @@ namespace PresentationLayer
 
         private void documentsTransition_Tick(object sender, EventArgs e)
         {
-            ToggleTransition(ref documentsPanel, ref documentsPanelExpand, ref documentsTransition, 250);
+            ToggleTransition(ref documentsPanel, ref documentsPanelExpand, ref documentsTransition, 200);
         }
 
         private void ToggleTransition(ref FlowLayoutPanel panel, ref bool expand, ref Timer transition, int maxHeight)
@@ -101,7 +101,7 @@ namespace PresentationLayer
 
         private void catalogTransition_Tick(object sender, EventArgs e)
         {
-            ToggleTransition(ref catalogPanel, ref catalogPanelExpand, ref catalogTransition, 200);
+            ToggleTransition(ref catalogPanel, ref catalogPanelExpand, ref catalogTransition, 250);
         }
 
         private void btnCatalog_Click(object sender, EventArgs e)

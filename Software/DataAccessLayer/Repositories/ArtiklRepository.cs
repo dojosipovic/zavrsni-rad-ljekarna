@@ -29,5 +29,12 @@ namespace DataAccessLayer.Repositories
 
             return saveChanges ? SaveChanges() : 0;
         }
+
+        public override int Remove(Artikl entity, bool saveChanges = true)
+        {
+            var item = Entities.Find(entity.ID);
+            Entities.Remove(item);
+            return saveChanges ? SaveChanges() : 0;
+        }
     }
 }

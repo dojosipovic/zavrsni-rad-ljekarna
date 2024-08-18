@@ -77,7 +77,7 @@ namespace PresentationLayer
                     } else MessageBox.Show(GetErrorMessage(ex), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } catch (Exception ex)
                 {
-                    MessageBox.Show("Neočekivana greška", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Neočekivana greška" + ex.Message, "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 await RefreshGUI();
             }
