@@ -115,6 +115,8 @@
     <Compile Include="Repositories\DobavljacRepository.cs" />
     <Compile Include="Repositories\FarmaceutRepository.cs" />
     <Compile Include="Repositories\JedinicaMjereRepository.cs" />
+    <Compile Include="Repositories\PacijentRepository.cs" />
+    <Compile Include="Repositories\ReceptRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />
   </ItemGroup>
