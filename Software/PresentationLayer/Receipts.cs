@@ -37,5 +37,12 @@ namespace PresentationLayer
             dgvReceipts.Columns["NarudzbaID"].HeaderText = "ID narudžbe";
             dgvReceipts.Columns["Dobavljac"].HeaderText = "Dobavljač";
         }
+
+        private async void btnAdd_Click(object sender, EventArgs e)
+        {
+            ReceiptDetails receiptDetails = new ReceiptDetails();
+            receiptDetails.ShowDialog();
+            await RefreshGUI();
+        }
     }
 }

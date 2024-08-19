@@ -53,6 +53,7 @@
     <Compile Include="Entities\Lijecnik.cs" />
     <Compile Include="Entities\Lijecnik.Ext.cs" />
     <Compile Include="Entities\Narudzba.cs" />
+    <Compile Include="Entities\Narudzba.Ext.cs" />
     <Compile Include="Entities\Pacijent.cs" />
     <Compile Include="Entities\Pacijent.Ext.cs" />
     <Compile Include="Entities\Podaci.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Entities\StavkeNarudzbe.cs" />
     <Compile Include="Entities\StavkeNarudzbe.Ext.cs" />
     <Compile Include="Entities\StavkePrimke.cs" />
+    <Compile Include="Entities\StavkePrimke.Ext.cs" />
     <Compile Include="Entities\StavkeRacuna.cs" />
     <Compile Include="Entities\StavkeRecepta.cs" />
     <Compile Include="Entities\Ustanova.cs" />

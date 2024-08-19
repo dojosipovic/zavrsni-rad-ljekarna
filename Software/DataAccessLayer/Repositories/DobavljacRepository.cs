@@ -1,6 +1,7 @@
 ﻿using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,10 @@ namespace DataAccessLayer.Repositories
 {
     public class DobavljacRepository : Repository<Dobavljac>
     {
+        public override IQueryable<Dobavljac> GetAll()
+        {
+            return base.GetAll().Include("Narudzba");
+        }
         public DobavljacRepository() : base(new DrugstoreModel())
         {
         }
