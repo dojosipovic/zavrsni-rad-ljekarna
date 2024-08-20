@@ -18,7 +18,7 @@ namespace EntitiesLayer.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ArtiklID { get; set; }
 
-        public int? Kolicina { get; set; }
+        public int Kolicina { get; set; }
 
         public virtual Artikl Artikl { get; set; }
 

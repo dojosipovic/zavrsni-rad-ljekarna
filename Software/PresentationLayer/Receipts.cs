@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,17 @@ namespace PresentationLayer
             ReceiptDetails receiptDetails = new ReceiptDetails();
             receiptDetails.ShowDialog();
             await RefreshGUI();
+        }
+
+        private async void btnDetails_ClickAsync(object sender, EventArgs e)
+        {
+            var receipt = dgvReceipts.CurrentRow?.DataBoundItem as Primka;
+            if (receipt != null)
+            {
+                ReceiptDetails receiptDetails = new ReceiptDetails(receipt);
+                receiptDetails.ShowDialog();
+                await RefreshGUI();
+            }
         }
     }
 }
