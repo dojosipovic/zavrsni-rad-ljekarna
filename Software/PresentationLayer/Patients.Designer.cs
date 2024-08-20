@@ -39,7 +39,6 @@
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
-            this.btnOpen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptions)).BeginInit();
             this.SuspendLayout();
@@ -145,21 +144,11 @@
             this.txtDate.Size = new System.Drawing.Size(129, 20);
             this.txtDate.TabIndex = 10;
             // 
-            // btnOpen
-            // 
-            this.btnOpen.Location = new System.Drawing.Point(975, 158);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
-            this.btnOpen.TabIndex = 11;
-            this.btnOpen.Text = "Otvori";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            // 
             // Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 473);
-            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtSurname);
@@ -196,6 +185,5 @@
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtDate;
-        private System.Windows.Forms.Button btnOpen;
     }
 }
