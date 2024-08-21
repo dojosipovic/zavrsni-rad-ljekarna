@@ -33,6 +33,7 @@ namespace PresentationLayer
                 btnAdd.Enabled = false;
                 btnSave.Enabled = false;
                 btnDelete.Enabled = false;
+                dgvInvoiceItems.Enabled = false;
             }
         }
 

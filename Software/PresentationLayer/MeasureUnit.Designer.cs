@@ -35,13 +35,16 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dgvMeasureUnits = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMeasureUnits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(213, 23);
+            this.btnAdd.Location = new System.Drawing.Point(211, 128);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(50, 50);
             this.btnAdd.TabIndex = 3;
@@ -51,7 +54,7 @@
             // btnDelete
             // 
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(389, 23);
+            this.btnDelete.Location = new System.Drawing.Point(387, 128);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(50, 50);
             this.btnDelete.TabIndex = 4;
@@ -61,7 +64,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(269, 23);
+            this.btnEdit.Location = new System.Drawing.Point(267, 128);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(50, 50);
             this.btnEdit.TabIndex = 5;
@@ -98,7 +101,7 @@
             this.dgvMeasureUnits.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMeasureUnits.EnableHeadersVisualStyles = false;
             this.dgvMeasureUnits.GridColor = System.Drawing.Color.White;
-            this.dgvMeasureUnits.Location = new System.Drawing.Point(210, 76);
+            this.dgvMeasureUnits.Location = new System.Drawing.Point(210, 181);
             this.dgvMeasureUnits.Margin = new System.Windows.Forms.Padding(0);
             this.dgvMeasureUnits.Name = "dgvMeasureUnits";
             this.dgvMeasureUnits.ReadOnly = true;
@@ -106,14 +109,36 @@
             this.dgvMeasureUnits.RowTemplate.DividerHeight = 2;
             this.dgvMeasureUnits.RowTemplate.Height = 30;
             this.dgvMeasureUnits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMeasureUnits.Size = new System.Drawing.Size(737, 374);
+            this.dgvMeasureUnits.Size = new System.Drawing.Size(737, 269);
             this.dgvMeasureUnits.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(213, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(299, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 37);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Jedinice mjere";
             // 
             // MeasureUnit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvMeasureUnits);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
@@ -124,7 +149,9 @@
             this.Text = "MeasureUnit";
             this.Load += new System.EventHandler(this.MeasureUnit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMeasureUnits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +160,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.DataGridView dgvMeasureUnits;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

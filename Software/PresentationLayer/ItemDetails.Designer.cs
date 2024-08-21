@@ -42,38 +42,42 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(100, 31);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(77, 6);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(193, 20);
+            this.txtName.Size = new System.Drawing.Size(220, 26);
             this.txtName.TabIndex = 0;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(102, 84);
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(77, 70);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(80, 20);
+            this.txtPrice.Size = new System.Drawing.Size(80, 26);
             this.txtPrice.TabIndex = 1;
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(102, 58);
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(77, 38);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(64, 20);
+            this.txtAmount.Size = new System.Drawing.Size(64, 26);
             this.txtAmount.TabIndex = 2;
             // 
             // cmbMeasureUnit
             // 
             this.cmbMeasureUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMeasureUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMeasureUnit.FormattingEnabled = true;
-            this.cmbMeasureUnit.Location = new System.Drawing.Point(172, 57);
+            this.cmbMeasureUnit.Location = new System.Drawing.Point(147, 36);
             this.cmbMeasureUnit.Name = "cmbMeasureUnit";
-            this.cmbMeasureUnit.Size = new System.Drawing.Size(121, 21);
+            this.cmbMeasureUnit.Size = new System.Drawing.Size(150, 28);
             this.cmbMeasureUnit.TabIndex = 3;
             // 
             // btnClose
             // 
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(93, 133);
+            this.btnClose.Location = new System.Drawing.Point(77, 113);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 50);
             this.btnClose.TabIndex = 4;
@@ -83,7 +87,7 @@
             // btnSave
             // 
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(202, 133);
+            this.btnSave.Location = new System.Drawing.Point(222, 113);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(50, 50);
             this.btnSave.TabIndex = 5;
@@ -93,27 +97,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 37);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Naziv";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 65);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Količina";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 91);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Cijena";
             // 
@@ -121,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 213);
+            this.ClientSize = new System.Drawing.Size(347, 190);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -131,8 +138,11 @@
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "ItemDetails";
-            this.Text = "ItemDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Artikl";
             this.Load += new System.EventHandler(this.ItemDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

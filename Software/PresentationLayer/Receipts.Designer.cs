@@ -34,13 +34,16 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
             this.dgvReceipts = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(210, 59);
+            this.btnAdd.Location = new System.Drawing.Point(209, 119);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(50, 50);
             this.btnAdd.TabIndex = 1;
@@ -50,7 +53,7 @@
             // btnDetails
             // 
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(266, 59);
+            this.btnDetails.Location = new System.Drawing.Point(265, 119);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(50, 50);
             this.btnDetails.TabIndex = 2;
@@ -88,7 +91,7 @@
             this.dgvReceipts.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReceipts.EnableHeadersVisualStyles = false;
             this.dgvReceipts.GridColor = System.Drawing.Color.White;
-            this.dgvReceipts.Location = new System.Drawing.Point(210, 112);
+            this.dgvReceipts.Location = new System.Drawing.Point(210, 172);
             this.dgvReceipts.Margin = new System.Windows.Forms.Padding(0);
             this.dgvReceipts.Name = "dgvReceipts";
             this.dgvReceipts.ReadOnly = true;
@@ -96,14 +99,36 @@
             this.dgvReceipts.RowTemplate.DividerHeight = 2;
             this.dgvReceipts.RowTemplate.Height = 30;
             this.dgvReceipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReceipts.Size = new System.Drawing.Size(590, 338);
+            this.dgvReceipts.Size = new System.Drawing.Size(720, 358);
             this.dgvReceipts.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(213, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(299, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 37);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Primke";
             // 
             // Receipts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(930, 530);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvReceipts);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.btnAdd);
@@ -113,7 +138,9 @@
             this.Text = "Receipts";
             this.Load += new System.EventHandler(this.Receipts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceipts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -121,5 +148,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.DataGridView dgvReceipts;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -18,5 +18,13 @@ namespace BusinessLogicLayer
                 return repo.GetAll().ToList().Find(x => x.Korime == korime);
             }
         }
+
+        public async Task<List<Farmaceut>> GetAll()
+        {
+            using(var repo = new FarmaceutRepository())
+            {
+                return await Task.Run(() => repo.GetAll().ToList());
+            }
+        }
     }
 }

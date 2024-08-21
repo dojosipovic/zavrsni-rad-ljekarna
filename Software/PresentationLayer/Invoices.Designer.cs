@@ -35,17 +35,20 @@
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
             this.btnDetails = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 35);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(296, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(116, 37);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Racun";
+            this.label1.Text = "Računi";
             // 
             // dgvInvoices
             // 
@@ -77,7 +80,7 @@
             this.dgvInvoices.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInvoices.EnableHeadersVisualStyles = false;
             this.dgvInvoices.GridColor = System.Drawing.Color.White;
-            this.dgvInvoices.Location = new System.Drawing.Point(210, 122);
+            this.dgvInvoices.Location = new System.Drawing.Point(210, 163);
             this.dgvInvoices.Margin = new System.Windows.Forms.Padding(0);
             this.dgvInvoices.Name = "dgvInvoices";
             this.dgvInvoices.ReadOnly = true;
@@ -85,13 +88,13 @@
             this.dgvInvoices.RowTemplate.DividerHeight = 2;
             this.dgvInvoices.RowTemplate.Height = 30;
             this.dgvInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoices.Size = new System.Drawing.Size(590, 328);
+            this.dgvInvoices.Size = new System.Drawing.Size(590, 287);
             this.dgvInvoices.TabIndex = 2;
             // 
             // btnDetails
             // 
             this.btnDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnDetails.Image")));
-            this.btnDetails.Location = new System.Drawing.Point(269, 69);
+            this.btnDetails.Location = new System.Drawing.Point(268, 110);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(50, 50);
             this.btnDetails.TabIndex = 4;
@@ -101,18 +104,29 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(213, 69);
+            this.btnAdd.Location = new System.Drawing.Point(212, 110);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(50, 50);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(210, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvInvoices);
@@ -123,6 +137,7 @@
             this.Text = "Invoices";
             this.Load += new System.EventHandler(this.Invoices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +148,6 @@
         private System.Windows.Forms.DataGridView dgvInvoices;
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

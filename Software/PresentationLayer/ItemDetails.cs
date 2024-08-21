@@ -34,6 +34,7 @@ namespace PresentationLayer
             {
                 txtName.Text = _item.Naziv;
                 txtAmount.Text = _item.Kolicina.ToString();
+                txtAmount.Enabled = false;
                 txtPrice.Text = _item.Cijena.ToString();
 
                 foreach(JedinicaMjere unit in cmbMeasureUnit.Items)
