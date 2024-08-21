@@ -74,6 +74,12 @@
     <Compile Include="Hospitals.Designer.cs">
       <DependentUpon>Hospitals.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceDetails.Designer.cs">
+      <DependentUpon>InvoiceDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invoices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,12 +154,6 @@
     <Compile Include="Receipts.Designer.cs">
       <DependentUpon>Receipts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Recipes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recipes.Designer.cs">
-      <DependentUpon>Recipes.cs</DependentUpon>
-    </Compile>
     <Compile Include="SupplierDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hospitals.resx">
       <DependentUpon>Hospitals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDetails.resx">
+      <DependentUpon>InvoiceDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices.resx">
       <DependentUpon>Invoices.cs</DependentUpon>
@@ -220,9 +223,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Receipts.resx">
       <DependentUpon>Receipts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Recipes.resx">
-      <DependentUpon>Recipes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>

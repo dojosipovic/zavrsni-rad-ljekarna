@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiptDetails));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtDate = new System.Windows.Forms.MaskedTextBox();
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.cmbOrder = new System.Windows.Forms.ComboBox();
@@ -128,24 +130,57 @@
             // 
             // dgvReceiptItems
             // 
-            this.dgvReceiptItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceiptItems.AllowUserToAddRows = false;
+            this.dgvReceiptItems.AllowUserToDeleteRows = false;
+            this.dgvReceiptItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvReceiptItems.BackgroundColor = System.Drawing.Color.White;
+            this.dgvReceiptItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvReceiptItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvReceiptItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReceiptItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvReceiptItems.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReceiptItems.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvReceiptItems.EnableHeadersVisualStyles = false;
+            this.dgvReceiptItems.GridColor = System.Drawing.Color.White;
             this.dgvReceiptItems.Location = new System.Drawing.Point(69, 147);
+            this.dgvReceiptItems.Margin = new System.Windows.Forms.Padding(0);
             this.dgvReceiptItems.Name = "dgvReceiptItems";
+            this.dgvReceiptItems.ReadOnly = true;
+            this.dgvReceiptItems.RowHeadersVisible = false;
+            this.dgvReceiptItems.RowTemplate.DividerHeight = 2;
+            this.dgvReceiptItems.RowTemplate.Height = 30;
+            this.dgvReceiptItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReceiptItems.Size = new System.Drawing.Size(437, 246);
-            this.dgvReceiptItems.TabIndex = 11;
+            this.dgvReceiptItems.TabIndex = 18;
             // 
             // ReceiptDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 469);
+            this.Controls.Add(this.dgvReceiptItems);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.cmbItems);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dgvReceiptItems);
             this.Controls.Add(this.cmbOrder);
             this.Controls.Add(this.cmbSupplier);
             this.Controls.Add(this.txtDate);

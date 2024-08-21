@@ -67,6 +67,8 @@
     <Compile Include="Entities\StavkePrimke.cs" />
     <Compile Include="Entities\StavkePrimke.Ext.cs" />
     <Compile Include="Entities\StavkeRacuna.cs" />
+    <Compile Include="Entities\StavkeRacuna.Ext.cs" />
+    <Compile Include="Entities\StavkeRacunaViewModel.cs" />
     <Compile Include="Entities\StavkeRecepta.cs" />
     <Compile Include="Entities\Ustanova.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

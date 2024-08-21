@@ -118,6 +118,7 @@
     <Compile Include="Repositories\JedinicaMjereRepository.cs" />
     <Compile Include="Repositories\PacijentRepository.cs" />
     <Compile Include="Repositories\PrimkaRepository.cs" />
+    <Compile Include="Repositories\RacunRepository.cs" />
     <Compile Include="Repositories\ReceptRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />

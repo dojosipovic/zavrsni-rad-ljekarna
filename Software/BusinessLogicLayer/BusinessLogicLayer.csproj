@@ -49,6 +49,7 @@
     <Compile Include="Exceptions\JedinicaMjereException.cs" />
     <Compile Include="Exceptions\NarudzbaException.cs" />
     <Compile Include="Exceptions\PrimkaException.cs" />
+    <Compile Include="Exceptions\RacunException.cs" />
     <Compile Include="FarmaceusServices.cs" />
     <Compile Include="JedinicaMjereServices.cs" />
     <Compile Include="LijecnikServices.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="PacijentServices.cs" />
     <Compile Include="PrimkaServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RacunServices.cs" />
     <Compile Include="ReceptServices.cs" />
     <Compile Include="StatusServices.cs" />
     <Compile Include="UstanovaServices.cs" />
