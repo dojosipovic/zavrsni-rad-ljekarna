@@ -37,5 +37,13 @@ namespace BusinessLogicLayer
                 return affectedRows > 0;
             }
         }
+
+        public async Task<List<StavkeRacuna>> GetInvoiceItems(Racun racun)
+        {
+            using(var repo = new RacunRepository())
+            {
+                return await Task.Run(() => repo.GetInvoiceItems(racun.ID).ToList());
+            }
+        }
     }
 }

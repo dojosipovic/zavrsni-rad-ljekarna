@@ -25,6 +25,15 @@ namespace PresentationLayer
         {
             InitializeComponent();
             _invoice = invoice;
+            if (_invoice != null)
+            {
+                txtAmount.Enabled = false;
+                txtDate.Enabled = false;
+                cmbItems.Enabled = false;
+                btnAdd.Enabled = false;
+                btnSave.Enabled = false;
+                btnDelete.Enabled = false;
+            }
         }
 
         private async void InvoiceDetails_Load(object sender, EventArgs e)
@@ -41,8 +50,10 @@ namespace PresentationLayer
             } else
             {
                 txtDate.Text = _invoice.Datum.ToString("dd.MM.yyyy HH:mm");
-                //_order.StavkeNarudzbe = await narudzbaServices.GetOrderItems(_order);
+                _invoice.StavkeRacuna = await racunServices.GetInvoiceItems(_invoice);
             }
+
+            RefreshGUI();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -84,7 +95,6 @@ namespace PresentationLayer
             double sum = 0;
             invoiceItemsViewModel.ForEach(x => sum += x.UkupnaCijena);
             txtSum.Text = sum.ToString();
-
             dgvInvoiceItems.DataSource = invoiceItemsViewModel;
             
             dgvInvoiceItems.Columns["StavkaRacuna"].Visible = false;

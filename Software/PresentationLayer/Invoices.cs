@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using EntitiesLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,17 @@ namespace PresentationLayer
             InvoiceDetails invoiceDetails = new InvoiceDetails();
             invoiceDetails.ShowDialog();
             await RefreshGUI();
+        }
+
+        private async void btnDetails_Click(object sender, EventArgs e)
+        {
+            var invoice = dgvInvoices.CurrentRow?.DataBoundItem as Racun;
+            if (invoice != null)
+            {
+                InvoiceDetails invoiceDetails = new InvoiceDetails(invoice);
+                invoiceDetails.ShowDialog();
+                await RefreshGUI();
+            }
         }
     }
 }

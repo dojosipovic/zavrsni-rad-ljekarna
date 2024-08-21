@@ -15,7 +15,7 @@ namespace DataAccessLayer.Repositories
         }
         public override IQueryable<Racun> GetAll()
         {
-            return base.GetAll().Include(r => r.Farmaceut);
+            return base.GetAll().Include(r => r.Farmaceut).Include(r => r.StavkeRacuna);
         }
         public override int Update(Racun entity, bool saveChanges = true)
         {
@@ -34,6 +34,19 @@ namespace DataAccessLayer.Repositories
                 model.Racun.Add(entity);
 
                 return saveChanges ? model.SaveChanges() : 0;
+            }
+        }
+
+        public ICollection<StavkeRacuna> GetInvoiceItems(int invoiceId)
+        {
+            using (var model = new DrugstoreModel())
+            {
+                var invoice = model.Racun.Include(n => n.StavkeRacuna).First(o => o.ID == invoiceId);
+                foreach (var item in invoice.StavkeRacuna)
+                {
+                    model.Entry(item).Reference(i => i.Artikl).Load();
+                }
+                return invoice.StavkeRacuna;
             }
         }
     }
