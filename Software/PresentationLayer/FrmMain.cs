@@ -95,7 +95,7 @@ namespace PresentationLayer
 
         private void catalogTransition_Tick(object sender, EventArgs e)
         {
-            ToggleTransition(ref catalogPanel, ref catalogPanelExpand, ref catalogTransition, 250);
+            ToggleTransition(ref catalogPanel, ref catalogPanelExpand, ref catalogTransition, 300);
         }
 
         private void btnCatalog_Click(object sender, EventArgs e)
@@ -149,6 +149,18 @@ namespace PresentationLayer
         {
             Text = GetTitleFromSender(sender);
             OpenForm(new Prescriptions());
+        }
+
+        private void btnPharmacists_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Pharmacists());
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            Text = GetTitleFromSender(sender);
+            OpenForm(new Account());
         }
     }
 }
