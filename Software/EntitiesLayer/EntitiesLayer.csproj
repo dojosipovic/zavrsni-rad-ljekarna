@@ -59,6 +59,7 @@
     <Compile Include="Entities\Podaci.cs" />
     <Compile Include="Entities\Primka.cs" />
     <Compile Include="Entities\Racun.cs" />
+    <Compile Include="Entities\RacunViewModel.cs" />
     <Compile Include="Entities\Recept.cs" />
     <Compile Include="Entities\StatusNarudzbe.cs" />
     <Compile Include="Entities\StatusNarudzbe.Ext.cs" />

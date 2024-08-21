@@ -27,9 +27,25 @@ namespace PresentationLayer
 
         private async Task RefreshGUI()
         {
-            dgvInvoices.DataSource = await racunServices.GetALl();
-            dgvInvoices.Columns["StavkeRacuna"].Visible = false;
-            dgvInvoices.Columns["FarmaceutID"].Visible = false;
+            var invoicesView = new List<RacunViewModel>();
+            var invoices = await racunServices.GetALl();
+            foreach(var item in invoices)
+            {
+                item.StavkeRacuna = await racunServices.GetInvoiceItems(item);
+                double sum = item.StavkeRacuna.Sum(x => x.Kolicina * x.Artikl.Cijena);
+                invoicesView.Add(new RacunViewModel
+                {
+                    ID = item.ID,
+                    Farmaceut = item.Farmaceut,
+                    Datum = item.Datum,
+                    UkupnaVrijednost = sum,
+                    Racun = item
+                });
+            }
+
+            dgvInvoices.DataSource = invoicesView;
+            dgvInvoices.Columns["UkupnaVrijednost"].HeaderText = "Uk vrijednost";
+            dgvInvoices.Columns["Racun"].Visible = false;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
@@ -41,9 +57,10 @@ namespace PresentationLayer
 
         private async void btnDetails_Click(object sender, EventArgs e)
         {
-            var invoice = dgvInvoices.CurrentRow?.DataBoundItem as Racun;
-            if (invoice != null)
+            var invoiceView = dgvInvoices.CurrentRow?.DataBoundItem as RacunViewModel;
+            if (invoiceView != null)
             {
+                var invoice = invoiceView.Racun;
                 InvoiceDetails invoiceDetails = new InvoiceDetails(invoice);
                 invoiceDetails.ShowDialog();
                 await RefreshGUI();
