@@ -93,7 +93,7 @@ namespace PresentationLayer
             }).ToList();
 
             double sum = 0;
-            invoiceItemsViewModel.ForEach(x => sum += x.UkupnaCijena);
+            invoiceItemsViewModel.ForEach(x => sum += double.Parse(x.UkupnaCijena));
             txtSum.Text = sum.ToString();
             dgvInvoiceItems.DataSource = invoiceItemsViewModel;
             

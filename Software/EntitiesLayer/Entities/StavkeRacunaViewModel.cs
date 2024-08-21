@@ -11,7 +11,7 @@ namespace EntitiesLayer.Entities
         public Artikl Artikl { get; set; }
         public int Kolicina { get; set; }
         public double Cijena { get; set; }
-        public double UkupnaCijena => Kolicina * Cijena;
+        public string UkupnaCijena => (Kolicina * Cijena).ToString();
         public StavkeRacuna StavkaRacuna { get; set; }
     }
 }

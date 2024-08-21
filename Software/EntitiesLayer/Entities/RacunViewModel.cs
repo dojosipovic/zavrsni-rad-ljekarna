@@ -11,7 +11,7 @@ namespace EntitiesLayer.Entities
         public int ID { get; set; }
         public DateTime Datum { get; set; }
         public Farmaceut Farmaceut { get; set; }
-        public double UkupnaVrijednost { get; set; }
+        public string UkupnaVrijednost { get; set; }
         public Racun Racun { get; set; }
     }
 }

@@ -38,7 +38,7 @@ namespace PresentationLayer
                     ID = item.ID,
                     Farmaceut = item.Farmaceut,
                     Datum = item.Datum,
-                    UkupnaVrijednost = sum,
+                    UkupnaVrijednost = sum.ToString(),
                     Racun = item
                 });
             }
