@@ -175,6 +175,7 @@
             this.btnSave.Size = new System.Drawing.Size(50, 50);
             this.btnSave.TabIndex = 12;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox1
             // 
@@ -258,6 +259,7 @@
             this.btnChangePassword.Size = new System.Drawing.Size(50, 50);
             this.btnChangePassword.TabIndex = 13;
             this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // groupBox2
             // 
@@ -288,6 +290,7 @@
             this.Name = "Account";
             this.Padding = new System.Windows.Forms.Padding(210, 0, 0, 0);
             this.Text = "Account";
+            this.Load += new System.EventHandler(this.Account_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -15,7 +15,14 @@ namespace DataAccessLayer.Repositories
 
         public override int Update(Farmaceut entity, bool saveChanges = true)
         {
-            throw new NotImplementedException();
+            var pharmacist = Entities.First(x => x.ID == entity.ID);
+            pharmacist.Ime = entity.Ime;
+            pharmacist.Prezime = entity.Prezime;
+            pharmacist.Email = entity.Email;
+            pharmacist.Adresa = entity.Adresa;
+            pharmacist.Lozinka = entity.Lozinka;
+
+            return saveChanges ? SaveChanges() : 0;
         }
     }
 }

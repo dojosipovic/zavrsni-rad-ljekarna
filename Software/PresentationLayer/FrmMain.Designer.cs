@@ -60,6 +60,8 @@
             this.btnHospital = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPrescriptions = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.btnPharmacists = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.documentsTransition = new System.Windows.Forms.Timer(this.components);
@@ -67,8 +69,6 @@
             this.catalogTransition = new System.Windows.Forms.Timer(this.components);
             this.panel15 = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.btnPharmacists = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.documentsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -86,9 +86,9 @@
             this.panel13.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -102,7 +102,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(210, 353);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(210, 461);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // documentsPanel
@@ -484,11 +484,37 @@
             this.btnPrescriptions.UseVisualStyleBackColor = false;
             this.btnPrescriptions.Click += new System.EventHandler(this.btnPrescriptions_Click);
             // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.btnPharmacists);
+            this.panel16.Location = new System.Drawing.Point(0, 250);
+            this.panel16.Margin = new System.Windows.Forms.Padding(0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(210, 50);
+            this.panel16.TabIndex = 5;
+            // 
+            // btnPharmacists
+            // 
+            this.btnPharmacists.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPharmacists.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
+            this.btnPharmacists.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPharmacists.Image = ((System.Drawing.Image)(resources.GetObject("btnPharmacists.Image")));
+            this.btnPharmacists.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPharmacists.Location = new System.Drawing.Point(-14, -12);
+            this.btnPharmacists.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPharmacists.Name = "btnPharmacists";
+            this.btnPharmacists.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnPharmacists.Size = new System.Drawing.Size(244, 78);
+            this.btnPharmacists.TabIndex = 1;
+            this.btnPharmacists.Text = "Farmaceuti";
+            this.btnPharmacists.UseVisualStyleBackColor = false;
+            this.btnPharmacists.Click += new System.EventHandler(this.btnPharmacists_Click);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Location = new System.Drawing.Point(0, 403);
+            this.panel2.Location = new System.Drawing.Point(0, 511);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(210, 50);
@@ -530,7 +556,7 @@
             // 
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel15.Controls.Add(this.btnAccount);
-            this.panel15.Location = new System.Drawing.Point(0, 353);
+            this.panel15.Location = new System.Drawing.Point(0, 461);
             this.panel15.Margin = new System.Windows.Forms.Padding(0);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(210, 50);
@@ -553,41 +579,16 @@
             this.btnAccount.UseVisualStyleBackColor = false;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.btnPharmacists);
-            this.panel16.Location = new System.Drawing.Point(0, 250);
-            this.panel16.Margin = new System.Windows.Forms.Padding(0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(210, 50);
-            this.panel16.TabIndex = 5;
-            // 
-            // btnPharmacists
-            // 
-            this.btnPharmacists.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPharmacists.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(241)))), ((int)(((byte)(252)))));
-            this.btnPharmacists.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPharmacists.Image = ((System.Drawing.Image)(resources.GetObject("btnPharmacists.Image")));
-            this.btnPharmacists.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPharmacists.Location = new System.Drawing.Point(-14, -12);
-            this.btnPharmacists.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPharmacists.Name = "btnPharmacists";
-            this.btnPharmacists.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnPharmacists.Size = new System.Drawing.Size(244, 78);
-            this.btnPharmacists.TabIndex = 1;
-            this.btnPharmacists.Text = "Farmaceuti";
-            this.btnPharmacists.UseVisualStyleBackColor = false;
-            this.btnPharmacists.Click += new System.EventHandler(this.btnPharmacists_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 453);
+            this.ClientSize = new System.Drawing.Size(1084, 561);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.IsMdiContainer = true;
+            this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "FrmMain";
             this.Text = "FrmMain";
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -607,9 +608,9 @@
             this.panel13.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
