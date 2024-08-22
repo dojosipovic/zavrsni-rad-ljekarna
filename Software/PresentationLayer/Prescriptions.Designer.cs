@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvPrescriptions = new System.Windows.Forms.DataGridView();
-            this.dgvPrescriptionDetails = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescriptions));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,106 +41,231 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtMBO = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
+            this.dgvPrescriptions = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvPrescriptionDetails = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptions)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptionDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvPrescriptions
-            // 
-            this.dgvPrescriptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvPrescriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrescriptions.Location = new System.Drawing.Point(210, 92);
-            this.dgvPrescriptions.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvPrescriptions.Name = "dgvPrescriptions";
-            this.dgvPrescriptions.Size = new System.Drawing.Size(459, 358);
-            this.dgvPrescriptions.TabIndex = 0;
-            this.dgvPrescriptions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrescriptions_CellClick);
-            // 
-            // dgvPrescriptionDetails
-            // 
-            this.dgvPrescriptionDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPrescriptionDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrescriptionDetails.Location = new System.Drawing.Point(672, 197);
-            this.dgvPrescriptionDetails.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.dgvPrescriptionDetails.Name = "dgvPrescriptionDetails";
-            this.dgvPrescriptionDetails.Size = new System.Drawing.Size(433, 253);
-            this.dgvPrescriptionDetails.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(689, 92);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(622, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Liječnik";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(692, 126);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(618, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Pacijent";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(692, 154);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(626, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Datum";
             // 
             // txtDoctor
             // 
             this.txtDoctor.Enabled = false;
-            this.txtDoctor.Location = new System.Drawing.Point(770, 89);
+            this.txtDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctor.Location = new System.Drawing.Point(689, 110);
             this.txtDoctor.Name = "txtDoctor";
-            this.txtDoctor.Size = new System.Drawing.Size(116, 20);
+            this.txtDoctor.Size = new System.Drawing.Size(116, 26);
             this.txtDoctor.TabIndex = 5;
             // 
             // txtPatient
             // 
             this.txtPatient.Enabled = false;
-            this.txtPatient.Location = new System.Drawing.Point(770, 123);
+            this.txtPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPatient.Location = new System.Drawing.Point(689, 142);
             this.txtPatient.Name = "txtPatient";
-            this.txtPatient.Size = new System.Drawing.Size(116, 20);
+            this.txtPatient.Size = new System.Drawing.Size(116, 26);
             this.txtPatient.TabIndex = 6;
             // 
             // txtID
             // 
             this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(911, 89);
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(811, 110);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(100, 26);
             this.txtID.TabIndex = 7;
             // 
             // txtMBO
             // 
             this.txtMBO.Enabled = false;
-            this.txtMBO.Location = new System.Drawing.Point(911, 123);
+            this.txtMBO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMBO.Location = new System.Drawing.Point(811, 142);
             this.txtMBO.Name = "txtMBO";
-            this.txtMBO.Size = new System.Drawing.Size(100, 20);
+            this.txtMBO.Size = new System.Drawing.Size(100, 26);
             this.txtMBO.TabIndex = 8;
             // 
             // txtDate
             // 
             this.txtDate.Enabled = false;
-            this.txtDate.Location = new System.Drawing.Point(770, 151);
+            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDate.Location = new System.Drawing.Point(689, 174);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(100, 20);
+            this.txtDate.Size = new System.Drawing.Size(116, 26);
             this.txtDate.TabIndex = 9;
+            // 
+            // dgvPrescriptions
+            // 
+            this.dgvPrescriptions.AllowUserToAddRows = false;
+            this.dgvPrescriptions.AllowUserToDeleteRows = false;
+            this.dgvPrescriptions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPrescriptions.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPrescriptions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPrescriptions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvPrescriptions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrescriptions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPrescriptions.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrescriptions.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPrescriptions.EnableHeadersVisualStyles = false;
+            this.dgvPrescriptions.GridColor = System.Drawing.Color.White;
+            this.dgvPrescriptions.Location = new System.Drawing.Point(3, 16);
+            this.dgvPrescriptions.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvPrescriptions.Name = "dgvPrescriptions";
+            this.dgvPrescriptions.ReadOnly = true;
+            this.dgvPrescriptions.RowHeadersVisible = false;
+            this.dgvPrescriptions.RowTemplate.DividerHeight = 2;
+            this.dgvPrescriptions.RowTemplate.Height = 30;
+            this.dgvPrescriptions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPrescriptions.Size = new System.Drawing.Size(359, 305);
+            this.dgvPrescriptions.TabIndex = 14;
+            this.dgvPrescriptions.SelectionChanged += new System.EventHandler(this.dgvPrescriptions_SelectionChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.dgvPrescriptions);
+            this.groupBox1.Location = new System.Drawing.Point(213, 126);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(365, 324);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Recepti";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.dgvPrescriptionDetails);
+            this.groupBox2.Location = new System.Drawing.Point(584, 202);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(518, 248);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // dgvPrescriptionDetails
+            // 
+            this.dgvPrescriptionDetails.AllowUserToAddRows = false;
+            this.dgvPrescriptionDetails.AllowUserToDeleteRows = false;
+            this.dgvPrescriptionDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPrescriptionDetails.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPrescriptionDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPrescriptionDetails.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvPrescriptionDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrescriptionDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvPrescriptionDetails.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrescriptionDetails.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPrescriptionDetails.EnableHeadersVisualStyles = false;
+            this.dgvPrescriptionDetails.GridColor = System.Drawing.Color.White;
+            this.dgvPrescriptionDetails.Location = new System.Drawing.Point(3, 16);
+            this.dgvPrescriptionDetails.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvPrescriptionDetails.Name = "dgvPrescriptionDetails";
+            this.dgvPrescriptionDetails.ReadOnly = true;
+            this.dgvPrescriptionDetails.RowHeadersVisible = false;
+            this.dgvPrescriptionDetails.RowTemplate.DividerHeight = 2;
+            this.dgvPrescriptionDetails.RowTemplate.Height = 30;
+            this.dgvPrescriptionDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPrescriptionDetails.Size = new System.Drawing.Size(512, 229);
+            this.dgvPrescriptionDetails.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(216, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(302, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 37);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Recepti";
             // 
             // Prescriptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtMBO);
             this.Controls.Add(this.txtID);
@@ -146,24 +274,22 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvPrescriptionDetails);
-            this.Controls.Add(this.dgvPrescriptions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Prescriptions";
             this.Padding = new System.Windows.Forms.Padding(210, 0, 0, 0);
             this.Text = "Recipes";
             this.Load += new System.EventHandler(this.Prescriptions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptions)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrescriptionDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvPrescriptions;
-        private System.Windows.Forms.DataGridView dgvPrescriptionDetails;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -172,5 +298,11 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtMBO;
         private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.DataGridView dgvPrescriptions;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvPrescriptionDetails;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

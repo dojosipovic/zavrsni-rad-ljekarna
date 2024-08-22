@@ -29,7 +29,7 @@ namespace PresentationLayer
             dgvPrescriptions.Columns["PacijentID"].Visible = false;
         }
 
-        private async void dgvPrescriptions_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgvPrescriptions_SelectionChanged(object sender, EventArgs e)
         {
             var prescription = dgvPrescriptions.CurrentRow?.DataBoundItem as Recept;
             if (prescription != null)

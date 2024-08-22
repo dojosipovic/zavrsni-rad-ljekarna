@@ -100,6 +100,7 @@ namespace PresentationLayer
             
             dgvInvoiceItems.Columns["StavkaRacuna"].Visible = false;
             dgvInvoiceItems.Columns["UkupnaCijena"].HeaderText = "Uk cijena";
+            dgvInvoiceItems.Columns["Kolicina"].HeaderText = "Količina";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

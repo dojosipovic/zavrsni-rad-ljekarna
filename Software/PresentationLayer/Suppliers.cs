@@ -34,9 +34,6 @@ namespace PresentationLayer
             dgvSuppliers.Columns["Narudzba"].Visible = false;
             dgvSuppliers.Columns["Primka"].Visible = false;
             dgvSuppliers.Columns["IBAN"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-            //dgvItems.Columns["JedinicaMjere"].HeaderText = "Jedinica mjere";
-            //dgvItems.Columns["Kolicina"].HeaderText = "Količina";
         }
 
         private async void btnEdit_Click(object sender, EventArgs e)

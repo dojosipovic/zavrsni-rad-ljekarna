@@ -63,6 +63,7 @@ namespace PresentationLayer
 
             dgvOrderItems.Columns["Artikl"].DisplayIndex = 0;
             dgvOrderItems.Columns["Kolicina"].DisplayIndex = 1;
+            dgvOrderItems.Columns["Kolicina"].HeaderText = "Količina";
         }
 
         private async void OrderDetails_Load(object sender, EventArgs e)

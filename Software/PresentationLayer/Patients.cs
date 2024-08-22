@@ -31,7 +31,7 @@ namespace PresentationLayer
             dgvPatients.Columns["DatumRodenja"].Visible = false;
         }
 
-        private async void dgvPatients_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgvPatients_SelectionChanged(object sender, EventArgs e)
         {
             var patient = dgvPatients.CurrentRow?.DataBoundItem as Pacijent;
             if (patient != null)

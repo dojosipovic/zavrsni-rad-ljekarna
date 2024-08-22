@@ -27,7 +27,7 @@ namespace PresentationLayer
             dgvHospitals.Columns["Lijecnik"].Visible = false;
         }
 
-        private void dgvHospitals_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvHospitals_SelectionChanged(object sender, EventArgs e)
         {
             var hospital = dgvHospitals.CurrentRow?.DataBoundItem as Ustanova;
             if (hospital != null)

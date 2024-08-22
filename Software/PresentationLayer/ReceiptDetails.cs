@@ -137,6 +137,7 @@ namespace PresentationLayer
             dgvReceiptItems.Columns["ArtiklID"].Visible = false;
             dgvReceiptItems.Columns["Primka"].Visible = false;
             dgvReceiptItems.Columns["Artikl"].DisplayIndex = 0;
+            dgvReceiptItems.Columns["Kolicina"].HeaderText = "Količina";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

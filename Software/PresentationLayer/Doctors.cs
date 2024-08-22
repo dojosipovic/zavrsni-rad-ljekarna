@@ -32,7 +32,7 @@ namespace PresentationLayer
             dgvDoctors.Columns["Recept"].Visible = false;
         }
 
-        private async void dgvDoctors_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgvDoctors_SelectionChanged(object sender, EventArgs e)
         {
             var doctor = dgvDoctors.CurrentRow?.DataBoundItem as Lijecnik;
             if (doctor != null)
