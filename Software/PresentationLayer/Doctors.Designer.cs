@@ -264,7 +264,7 @@
             this.groupBox3.Size = new System.Drawing.Size(433, 287);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Primke";
+            this.groupBox3.Text = "Recepti";
             // 
             // pictureBox1
             // 

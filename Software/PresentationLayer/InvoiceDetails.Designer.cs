@@ -93,7 +93,7 @@
             this.txtDate.Location = new System.Drawing.Point(84, 18);
             this.txtDate.Mask = "00.00.0000 90:00";
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(100, 26);
+            this.txtDate.Size = new System.Drawing.Size(140, 26);
             this.txtDate.TabIndex = 4;
             this.txtDate.ValidatingType = typeof(System.DateTime);
             // 
