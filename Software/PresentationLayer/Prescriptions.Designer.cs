@@ -58,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(622, 116);
+            this.label1.Location = new System.Drawing.Point(672, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(618, 148);
+            this.label2.Location = new System.Drawing.Point(668, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(626, 177);
+            this.label3.Location = new System.Drawing.Point(676, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             this.txtDoctor.Enabled = false;
             this.txtDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctor.Location = new System.Drawing.Point(689, 110);
+            this.txtDoctor.Location = new System.Drawing.Point(739, 106);
             this.txtDoctor.Name = "txtDoctor";
             this.txtDoctor.Size = new System.Drawing.Size(116, 26);
             this.txtDoctor.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             this.txtPatient.Enabled = false;
             this.txtPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPatient.Location = new System.Drawing.Point(689, 142);
+            this.txtPatient.Location = new System.Drawing.Point(739, 138);
             this.txtPatient.Name = "txtPatient";
             this.txtPatient.Size = new System.Drawing.Size(116, 26);
             this.txtPatient.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(811, 110);
+            this.txtID.Location = new System.Drawing.Point(861, 106);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 26);
             this.txtID.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.txtMBO.Enabled = false;
             this.txtMBO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMBO.Location = new System.Drawing.Point(811, 142);
+            this.txtMBO.Location = new System.Drawing.Point(861, 138);
             this.txtMBO.Name = "txtMBO";
             this.txtMBO.Size = new System.Drawing.Size(100, 26);
             this.txtMBO.TabIndex = 8;
@@ -124,7 +124,7 @@
             // 
             this.txtDate.Enabled = false;
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDate.Location = new System.Drawing.Point(689, 174);
+            this.txtDate.Location = new System.Drawing.Point(739, 170);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(116, 26);
             this.txtDate.TabIndex = 9;
@@ -167,7 +167,7 @@
             this.dgvPrescriptions.RowTemplate.DividerHeight = 2;
             this.dgvPrescriptions.RowTemplate.Height = 30;
             this.dgvPrescriptions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrescriptions.Size = new System.Drawing.Size(359, 305);
+            this.dgvPrescriptions.Size = new System.Drawing.Size(426, 305);
             this.dgvPrescriptions.TabIndex = 14;
             this.dgvPrescriptions.SelectionChanged += new System.EventHandler(this.dgvPrescriptions_SelectionChanged);
             // 
@@ -178,7 +178,7 @@
             this.groupBox1.Controls.Add(this.dgvPrescriptions);
             this.groupBox1.Location = new System.Drawing.Point(213, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(365, 324);
+            this.groupBox1.Size = new System.Drawing.Size(432, 324);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recepti";
@@ -189,9 +189,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgvPrescriptionDetails);
-            this.groupBox2.Location = new System.Drawing.Point(584, 202);
+            this.groupBox2.Location = new System.Drawing.Point(651, 202);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(518, 248);
+            this.groupBox2.Size = new System.Drawing.Size(451, 248);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Stavke recepta";
@@ -234,7 +234,7 @@
             this.dgvPrescriptionDetails.RowTemplate.DividerHeight = 2;
             this.dgvPrescriptionDetails.RowTemplate.Height = 30;
             this.dgvPrescriptionDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrescriptionDetails.Size = new System.Drawing.Size(512, 229);
+            this.dgvPrescriptionDetails.Size = new System.Drawing.Size(445, 229);
             this.dgvPrescriptionDetails.TabIndex = 15;
             // 
             // pictureBox1
